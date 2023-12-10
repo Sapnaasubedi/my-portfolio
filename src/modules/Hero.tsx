@@ -24,6 +24,7 @@ const HeroSection = () => {
       vertical
       style={{ alignItems: `center`, margin: "80px", gap: "50px", marginBottom:"160px" }}
     >
+      
       <Card
         style={{ background: "#DCDCDC", borderRadius: "50px", width: "250px" }}
       >
