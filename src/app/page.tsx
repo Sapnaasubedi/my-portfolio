@@ -1,5 +1,10 @@
-import HeroSection from "@/modules/hero";
-import Navbar from "@/modules/navbar";
+import AboutMe from "@/modules/About";
+import Contact from "@/modules/Contact";
+import Experience from "@/modules/Experience";
+import HeroSection from "@/modules/Hero";
+import Navbar from "@/modules/Navbar";
+import Skills from "@/modules/Skills";
+
 import React from "react";
 
 const page = () => {
@@ -7,6 +12,10 @@ const page = () => {
     <div>
       <Navbar />
       <HeroSection />
+     <AboutMe/>
+     <Experience/>
+     <Skills/>
+     <Contact/>
     </div>
   );
 };
