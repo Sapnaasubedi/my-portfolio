@@ -1,19 +1,23 @@
-import HeroSection from "@/modules/hero";
-import Navbar from "@/modules/navbar";
+import AboutMe from "@/modules/About";
+import Contact from "@/modules/Contact";
+import Experience from "@/modules/Experience";
+import Footer from "@/modules/Footer";
+import HeroSection from "@/modules/Hero";
+import Navbar from "@/modules/Navbar";
+import Skills from "@/modules/Skills";
+
 import React from "react";
 
 const page = () => {
   return (
-    <div
-      style={{
-        padding: "18px 24px",
-        minHeight: "100vh",
-        maxWidth: `calc(100% - 110px)`,
-        marginLeft: `250px`,
-      }}
-    >
+    <div>
       <Navbar />
       <HeroSection />
+     <AboutMe/>
+     <Experience/>
+     <Skills/>
+     <Contact/>
+     <Footer/>
     </div>
   );
 };
