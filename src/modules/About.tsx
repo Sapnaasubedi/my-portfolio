@@ -11,7 +11,6 @@ const AboutMe = () => {
     <div
       style={{
         marginLeft: `200px`,
-        height: "100vh",
       }}
     >
       <Row justify="center">
