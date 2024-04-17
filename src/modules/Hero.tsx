@@ -22,7 +22,7 @@ const HeroSection = () => {
   return (
     <Flex
       vertical
-      style={{ alignItems: `center`, margin: "80px", gap: "50px" }}
+      style={{ alignItems: `center`, margin: "80px", gap: "50px", marginBottom:"160px" }}
     >
       <Card
         style={{ background: "#DCDCDC", borderRadius: "50px", width: "250px" }}
