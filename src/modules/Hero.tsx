@@ -1,22 +1,24 @@
 "use client";
 import {
+  Button,
   Card,
-  Col,
-  Descriptions,
-  Divider,
   Flex,
-  Row,
-  Space,
   Typography,
 } from "antd";
 import React from "react";
 import { MdPhoneInTalk, MdWavingHand } from "react-icons/md";
-import CoverImage from "../app/assets/cover.jpeg";
+
 const { Title, Text } = Typography;
-import Image from "next/image";
-import { PhoneOutlined } from "@ant-design/icons";
-import { FaPhoneAlt } from "react-icons/fa";
+
 const HeroSection = () => {
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  
   return (
     <Flex
       vertical
@@ -45,13 +47,16 @@ const HeroSection = () => {
         </span>
         &nbsp; Odyssey
       </Title>
-    
-        <Card style={{ borderRadius: "50px", background: "#d4f1ea" ,}}>
-          <Text strong style={{ color: "#9d9c9c", alignItems: `center` }}>
-          <MdPhoneInTalk /> Contact Now  
-          </Text>
-        </Card>
-      <Divider/>
+
+      <Button
+        style={{ borderRadius: "50px", background: "#d4f1ea", border: "none" }}
+        size="large"
+        onClick={() => scrollToSection("contact")}
+      >
+        <Text strong style={{ color: "#9d9c9c", alignItems: `center` }}>
+          <MdPhoneInTalk /> Contact Now
+        </Text>
+      </Button>
     </Flex>
   );
 };

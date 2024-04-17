@@ -35,7 +35,7 @@ const StyleCard = styled(Card)`
 `;
 const Skills = () => {
   return (
-    <div style={{marginBottom:"50px"}}>
+    <div id="skills" style={{ marginBottom: "50px" }}>
       <Row justify="center" gutter={[20, 20]}>
         <Col span={13}>
           <Title level={4}>Skills</Title>
@@ -142,22 +142,46 @@ const Skills = () => {
               </Text>
             </Col>
             <Col span={4}>
-              <StyleCard style={{ textAlign: "center",height:"120px" ,width:"150px"}}><Text strong>Time Management</Text></StyleCard>
+              <StyleCard
+                style={{ textAlign: "center", height: "120px", width: "150px" }}
+              >
+                <Text strong>Time Management</Text>
+              </StyleCard>
             </Col>
             <Col span={4}>
-              <StyleCard style={{ textAlign: "center",height:"120px" ,width:"140px"}}><Text strong>Teamwork</Text></StyleCard>
+              <StyleCard
+                style={{ textAlign: "center", height: "120px", width: "140px" }}
+              >
+                <Text strong>Teamwork</Text>
+              </StyleCard>
             </Col>
             <Col span={4}>
-              <StyleCard style={{ textAlign: "center",height:"120px" ,width:"140px" }}><Text strong>Problem-solving</Text></StyleCard>
+              <StyleCard
+                style={{ textAlign: "center", height: "120px", width: "140px" }}
+              >
+                <Text strong>Problem-solving</Text>
+              </StyleCard>
             </Col>
             <Col span={4}>
-              <StyleCard style={{ textAlign: "center",height:"120px",width:"140px"  }}><Text strong>Creativity</Text></StyleCard>
+              <StyleCard
+                style={{ textAlign: "center", height: "120px", width: "140px" }}
+              >
+                <Text strong>Creativity</Text>
+              </StyleCard>
             </Col>
             <Col span={4}>
-              <StyleCard style={{ textAlign: "center",height:"120px",width:"140px" }}><Text strong>Adaptability</Text></StyleCard>
+              <StyleCard
+                style={{ textAlign: "center", height: "120px", width: "140px" }}
+              >
+                <Text strong>Adaptability</Text>
+              </StyleCard>
             </Col>
             <Col span={4}>
-              <StyleCard style={{ textAlign: "center",height:"120px" ,width:"140px"}}><Text strong>Critical thinking</Text> </StyleCard>
+              <StyleCard
+                style={{ textAlign: "center", height: "120px", width: "140px" }}
+              >
+                <Text strong>Critical thinking</Text>
+              </StyleCard>
             </Col>
           </Row>
         </Col>

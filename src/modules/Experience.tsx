@@ -2,19 +2,16 @@
 import {
   Row,
   Col,
-  Card,
   Typography,
   Flex,
   Timeline,
   Collapse,
-  Button,
   CollapseProps,
 } from "antd";
 import Image from "next/image";
 import React, { CSSProperties, useState } from "react";
 import styled from "styled-components";
 import Takeo from "../app/assets/takeo-logo.svg";
-import { CaretRightOutlined } from "@ant-design/icons";
 
 const { Title, Text, Link } = Typography;
 
@@ -103,6 +100,7 @@ const Experience = () => {
   };
   return (
     <div
+      id="works"
       style={{
         marginLeft: `200px`,
       }}

@@ -6,6 +6,13 @@ import { FaFacebookF, FaGithub, FaLinkedin } from "react-icons/fa";
 const { Title } = Typography;
 
 const Navbar: FC = () => {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  
   return (
     <div
     style={{
@@ -14,8 +21,9 @@ const Navbar: FC = () => {
       <Row justify="center">
         <Col span={12}>
           <Space size="large">
-            <Title level={5}>WORKS</Title>
-            <Title level={5}>CONTACT</Title>
+            <Title level={5} onClick={() => scrollToSection("works")}>WORKS</Title>
+            <Title level={5} onClick={() => scrollToSection("contact")}>CONTACT</Title>
+            <Title level={5} onClick={() => scrollToSection("skills")}>SKILLS</Title>
           </Space>
         </Col>
        

@@ -1,6 +1,7 @@
 import AboutMe from "@/modules/About";
 import Contact from "@/modules/Contact";
 import Experience from "@/modules/Experience";
+import Footer from "@/modules/Footer";
 import HeroSection from "@/modules/Hero";
 import Navbar from "@/modules/Navbar";
 import Skills from "@/modules/Skills";
@@ -16,6 +17,7 @@ const page = () => {
      <Experience/>
      <Skills/>
      <Contact/>
+     <Footer/>
     </div>
   );
 };
