@@ -1,7 +1,6 @@
 "use client";
 import React, { FC } from "react";
 import { Col, Row, Space, Typography } from "antd";
-import { FaFacebookF, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const { Title } = Typography;
 
@@ -21,32 +20,19 @@ const Navbar: FC = () => {
       <Row justify="center">
         <Col span={12}>
           <Space size="large">
-            <Title level={5} onClick={() => scrollToSection("works")}>WORKS</Title>
-            <Title level={5} onClick={() => scrollToSection("contact")}>CONTACT</Title>
-            <Title level={5} onClick={() => scrollToSection("skills")}>SKILLS</Title>
+          <Title level={3} style={{ background:
+              "linear-gradient(90deg, rgba(174,238,204,1) 35%, rgba(174,199,228,1) 91%)",
+            WebkitBackgroundClip: `text`,
+            WebkitTextFillColor: `transparent`}} >SS</Title>
           </Space>
         </Col>
        
         <Col span={4}>
           <Space size="large" >
-            <a
-              href="https://github.com/Sapnaasubedi"
-              style={{ color: "black" }}
-            >
-              <FaGithub size={25} />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/sapana-subedi-77227720a/"
-              style={{ color: "black" }}
-            >
-              <FaLinkedin size={25} />
-            </a>
-            <a
-              href="https://www.facebook.com/profile.php?id=100010663329163"
-              style={{ color: "black" }}
-            >
-              <FaFacebookF size={25} />
-            </a>
+          <Title level={5} onClick={() => scrollToSection("works")}>WORKS</Title>
+            <Title level={5} onClick={() => scrollToSection("contact")}>CONTACT</Title>
+            <Title level={5} onClick={() => scrollToSection("skills")}>SKILLS</Title>
+            
           </Space>
         </Col>
       </Row>

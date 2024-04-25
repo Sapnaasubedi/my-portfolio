@@ -1,5 +1,5 @@
 "use client";
-import { Card, Col, Row, Typography } from "antd";
+import { Card, Col, Flex, Row, Typography } from "antd";
 import React from "react";
 import CoverImage from "../app/assets/cover.jpeg";
 import Image from "next/image";
@@ -8,31 +8,33 @@ const { Title } = Typography;
 
 const AboutMe = () => {
   return (
-    <div
-      style={{
-        marginLeft: `200px`,
-      }}
+    <Flex
+     justify="center" 
     >
-      <Row justify="center">
-        <Col span={11}>
+      <Row >
+        <Col span={15}>
           <Title level={3}>About Me</Title>
           <Title
+          level={5}
             style={{
-              maxWidth: "500px",
+              maxWidth: "600px",
               fontSize: "16px",
               fontWeight: 200,
               lineHeight: "30px",
             }}
           >
             Hello! I&apos;m a seasoned software developer with a passion for
-            innovation and problem-solving. With 4 years of experience, I
-            specialize in crafting clean, efficient code that transforms ideas
-            into reality. My love for technology extends beyond the screen—I
-            believe in using software to make a positive impact in people&apos;s
-            lives. Let&apos;s collaborate on projects that push boundaries and
-            inspire change. When I&apos;m not coding, you can find me exploring
-            the outdoors. Let&apos;s connect and create something amazing
-            together!
+            innovation and problem-solving. I specialize in crafting clean,
+            efficient code that transforms ideas into reality. My love for
+            technology extends beyond the screen—I believe in using software to
+            make a positive impact in people&apos;s lives.Aim to leverage deep
+            technical acumen and diverse industry experience to drive software
+            innovation and efficiency in a challenging contractor role. Focused
+            on delivering high-quality, scalable solutions that enhance user
+            engagement and operational excellence. Let&apos;s collaborate on
+            projects that push boundaries and inspire change. When I&apos;m not
+            coding, you can find me exploring the outdoors. Let&apos;s connect
+            and create something amazing together!
           </Title>
         </Col>
 
@@ -48,7 +50,7 @@ const AboutMe = () => {
           </Card>
         </Col>
       </Row>
-    </div>
+    </Flex>
   );
 };
 

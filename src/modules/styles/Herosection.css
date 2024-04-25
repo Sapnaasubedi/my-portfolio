@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@property --glow-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #adf5ff;
+}
+
+html,
+body {
+  background: linear-gradient(
+    180deg,
+    var(--token-6687f0df-4ada-4158-b494-3349d4cd28b5, #081822) 0%,
+    rgba(14, 28, 34, 0) 100%
+  );
+
+}
+
+.hero {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+ padding: 10rem 30rem 12rem;
+  overflow: hidden;
+ 
+  align-items: center;
+
+}
+
+h1 {
+ 
+  justify-content: center;
+  color: white;
+  font-size: 84px;
+  font-family: "Caveat", cursive;
+  text-align: center;
+}
+
+@keyframes bg-animation {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 400% 400%;
+  }
+}
+/* 
+#glow {
+  position: absolute;
+  width: 50vw;
+  height: 100vw;
+  background: radial-gradient(
+    circle closest-side,
+    var(--glow-color),
+    transparent
+  );
+  animation: glow-animation 5.2s ease infinite alternate;
+  transform: translate(-50%, -50%);
+} */
+
+@keyframes glow-animation {
+  from {
+    --glow-color: #adf5ff;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  to {
+    --glow-color: #a874aa9e;
+    transform: translate(-50%, -50%) scale(1) rotate(90deg);
+  }
+}
+
+.avatar-wrapper {
+  position: relative; /* This ensures the hover message is positioned relative to the wrapper */
+  display: flex; /* Keep the wrapper inline to avoid affecting layout */
+}
+
+.avatar {
+  --s: 20px;
+  --b: 5px;
+  --f: 1;
+
+  aspect-ratio: 1;
+  cursor: pointer;
+  border-radius: 100%;
+
+  outline: var(--b) solid var(--c);
+  outline-offset: var(--_o);
+  transform: scale(var(--f));
+  transition: 0.7s;
+}
+
+.avatar-wrapper img:hover {
+  --f: 1.35;
+}
+
+
+.hover-message {
+  position: absolute; 
+  top:  100%; /* Position it above the avatar */
+  left: 50%; /* Center it horizontally */
+  transform: translateX(-50%); /* Center it horizontally */
+  background: rgba(0, 0, 0, 0.7); /* Dark background for better readability */
+  color: white; /* White text for contrast */
+  padding: 1rem; /* Padding for spacing */  
+  border-radius: 0.5rem; /* Softened corners */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth transition */
+  pointer-events: none; /* Prevent the hover message from interfering with clicks */
+  width: 150px;
+}
+
+.avatar-wrapper img:hover + .hover-message {
+  opacity: 1; /* Show the message on hover */
+  
+}
+
+#cards {
+  list-style: none;
+  display: grid;
+  
+  gap: 1em;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  width: 1000px;
+  justify-content: center;
+}
+
+#card-1 {
+  --index: 1;
+ 
+}
+
+#card-2 {
+  --index: 2;
+}
+
+#card-4 {
+  --index: 3;
+}
+.card {
+  position: sticky;
+  top: 0;
+  padding-top: 90px;
+align-items: center;  }
+
+.card-content {
+  background:  linear-gradient(90deg, rgba(44,74,119,0.9) 0%, rgba(44,74,119,0.9) 100%),url("https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png");
+  color: white;
+  border-radius: 2rem;
+  overflow: hidden;
+  display: grid;
+  grid-template-areas: "text img";
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto;
+  align-items: stretch;
+  padding: 5.4em;
+}
+
+.card-content > div {
+  grid-area: text;
+  
+  place-self: center;
+  text-align: left;
+  display: grid;
+  gap: 0;
+  place-items: start;
+}
+
+.card-content > figure {
+  grid-area: img;
+}
+
+.card-content > figure > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: .4em;
+}
+
+@supports (animation-timeline: works) {
+
+  @scroll-timeline cards-element-scrolls-in-body {
+    source: selector(body);
+    scroll-offsets:
+      selector(#cards) start 1,
+      selector(#cards) start 0
+    ;
+    start: selector(#cards) start 1;
+    end: selector(#cards) start 0;
+    time-range: 4s;
+  }
+
+
+
+  @keyframes scale {
+    to {
+      transform:
+        scale(calc(
+          1.1
+          -
+          calc(0.1 * var(--reverse-index))
+        ));
+    }
+  }
+}
