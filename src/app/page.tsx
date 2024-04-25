@@ -15,7 +15,7 @@ const page = () => {
     <div>
       {/* <Navbar /> */}
       <HeroPage />
-      {/* <Social/> */}
+      <Social/>
       <Works/>
      <AboutMe/>
      <Experience/>

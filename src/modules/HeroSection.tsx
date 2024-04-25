@@ -7,19 +7,10 @@ import Flash from "@/app/assets/flash.webp";
 import { MdPhoneInTalk } from "react-icons/md";
 import Image from "next/image";
 
-type MouseMoveEvent = React.MouseEvent<HTMLDivElement, MouseEvent>;
 const { Title, Text } = Typography;
 
 const HeroPage: React.FC = () => {
-  const glowRef = useRef<HTMLDivElement | null>(null);
-
-  const handleMouseMove = (event: MouseMoveEvent) => {
-    const glow = glowRef.current;
-    if (glow) {
-      glow.style.top = `${event.pageY}px`;
-      glow.style.left = `${event.pageX}px`;
-    }
-  };
+ 
   const openResume = () => {
     window.open(
       "https://docs.google.com/document/d/1Cbm4Dwx9xM2m2Arr91B6Hqk58MhCmwkhb7cSWikqnLg/edit?pli=1",
@@ -33,8 +24,8 @@ const HeroPage: React.FC = () => {
     }
   };
   return (
-    <Flex vertical className="hero" onMouseMove={handleMouseMove}>
-      <div id="glow" ref={glowRef}></div>
+    <Flex vertical className="hero" >
+    
       <div className="avatar-wrapper">
         <Image
           src={Videos.src}
@@ -53,6 +44,7 @@ const HeroPage: React.FC = () => {
               "linear-gradient(6983deg, var(--token-e4fe9052-f52e-4ea9-884d-9d363b322bb6, rgb(81, 137, 221)) 0%, rgb(200, 213, 235) 100%)",
             WebkitBackgroundClip: `text`,
             WebkitTextFillColor: `transparent`,
+          
           }}
         >
           Software Development

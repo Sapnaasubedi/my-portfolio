@@ -5,13 +5,10 @@ import "./styles/Herosection.css";
 import Image from "next/image";
 import Takeobg from "@/app/assets/takeobg.png";
 import { CiCircleCheck } from "react-icons/ci";
-import Programming from "@/app/assets/programming.png"
-import Girl from "@/app/assets/girl.png"
-
-
+import Programming from "@/app/assets/programming.png";
+import Girl from "@/app/assets/girl.png";
 
 const { Title, Text } = Typography;
-
 
 const Works: React.FC = () => {
   const openResume = () => {
@@ -21,14 +18,13 @@ const Works: React.FC = () => {
     );
   };
   return (
-    <Flex vertical style={{ justifyContent: "center" }}>
+    <Flex vertical style={{ justifyContent: "center", padding: `130px 0` }}>
       <Space direction="vertical" size="small">
-       
         <Title
           level={5}
           style={{
             background:
-              "linear-gradient(6983deg, var(--token-e4fe9052-f52e-4ea9-884d-9d363b322bb6, rgb(81, 137, 221)) 0%, rgb(200, 213, 235) 100%)",
+              "linear-gradient(90deg, rgba(46,60,134,1) 0%, rgba(103,141,228,1) 53%, rgba(61,61,89,1) 100%)",
             WebkitBackgroundClip: `text`,
             WebkitTextFillColor: `transparent`,
             textAlign: "center",
@@ -40,21 +36,22 @@ const Works: React.FC = () => {
       </Space>
 
       <Title
+        level={2}
         style={{
           color: "white",
           fontFamily: "cursive",
           textAlign: "center",
+          fontSize: "38px",
         }}
       >
         Where I&apos;ve Worked
       </Title>
 
       <Flex style={{ justifyContent: "center" }}>
-        <ul id="cards">
-          <li className="card" id="card-1">
+        <Row gutter={[16, 16]} id="cards">
+          <Col className="card" id="card-1">
             <Flex className="card-content">
               <Space>
-              
                 <Title
                   level={4}
                   style={{
@@ -67,12 +64,11 @@ const Works: React.FC = () => {
                 >
                   TAKEO NEPAL . 2021
                 </Title>
-                
+
                 <Text
                   style={{
                     color: "white",
                     fontFamily: "cursive",
-                    textAlign: "center",
                     fontSize: "38px",
                   }}
                 >
@@ -123,38 +119,42 @@ const Works: React.FC = () => {
                   <CiCircleCheck /> React/Next.js developer.
                 </Text>
                 <Button
-          style={{
-            borderRadius: "12px",
-            background: "rgba(230, 230, 230, 1)",
-            border: "none",
-            boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;",
-            height: "50px",
-            width: "auto",
-            marginTop: "40px"
-          }}
-          size="large"
-          onClick={openResume}        >
-          <Text
-            strong
-            style={{ color: "rgb(44, 74, 119)", alignItems: `center`, fontSize: "16px" }}
-          >
-           See more
-          </Text>
-        </Button>
+                  style={{
+                    borderRadius: "12px",
+                    background: "rgba(230, 230, 230, 1)",
+                    border: "none",
+                    boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;",
+                    height: "50px",
+                    width: "100%",
+                    marginTop: "40px",
+                  }}
+                  size="large"
+                  onClick={openResume}
+                >
+                  <Text
+                    strong
+                    style={{
+                      color: "rgb(44, 74, 119)",
+                      alignItems: `center`,
+                      fontSize: "16px",
+                    }}
+                  >
+                    See more
+                  </Text>
+                </Button>
               </Space>
               <figure>
-            
                 <Image
                   src={Takeobg.src}
                   alt="card-one"
                   width={500}
-                  height={500} 
+                  height={50}
                 />
               </figure>
             </Flex>
-          </li>
+          </Col>
 
-          <li className="card" id="card-2">
+          <Col className="card" id="card-2">
             <Flex className="card-content">
               <Space>
                 <Title
@@ -167,14 +167,14 @@ const Works: React.FC = () => {
                     textAlign: "center",
                   }}
                 >
-                 LIGHTWEB GROUP . 2019-2021
+                  LIGHTWEB GROUP . 2019-2021
                 </Title>
 
                 <Text
                   style={{
                     color: "white",
                     fontFamily: "cursive",
-                    textAlign: "center",
+                 
                     fontSize: "38px",
                   }}
                 >
@@ -187,25 +187,18 @@ const Works: React.FC = () => {
                     fontSize: "18px",
                   }}
                 >
-                  <CiCircleCheck /> Built a user-friendly e-commerce frontend with React.
+                  <CiCircleCheck /> Built a user-friendly e-commerce frontend
+                  with React.
+                </Text>
 
-                </Text>
-                
                 <Text
                   style={{
                     color: "rgba(255, 255, 255, 0.8)",
                     fontSize: "18px",
                   }}
                 >
-                  <CiCircleCheck /> Collaborated on backend inventory management.
-                </Text>
-                <Text
-                  style={{
-                    color: "rgba(255, 255, 255, 0.8)",
-                    fontSize: "18px",
-                  }}
-                >
-                  <CiCircleCheck /> Collaborated on backend inventory management.
+                  <CiCircleCheck /> Collaborated on backend inventory
+                  management.
                 </Text>
                 <Text
                   style={{
@@ -213,7 +206,17 @@ const Works: React.FC = () => {
                     fontSize: "18px",
                   }}
                 >
-                  <CiCircleCheck /> Integrated PayPal and Stripe for secure checkout.
+                  <CiCircleCheck /> Collaborated on backend inventory
+                  management.
+                </Text>
+                <Text
+                  style={{
+                    color: "rgba(255, 255, 255, 0.8)",
+                    fontSize: "18px",
+                  }}
+                >
+                  <CiCircleCheck /> Integrated PayPal and Stripe for secure
+                  checkout.
                 </Text>
                 <Text
                   style={{
@@ -224,39 +227,42 @@ const Works: React.FC = () => {
                   <CiCircleCheck /> Added advanced catalog features.
                 </Text>
                 <Button
-          style={{
-            borderRadius: "12px",
-            background: "rgba(230, 230, 230, 1)",
-            border: "none",
-            boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;",
-            height: "50px",
-            width: "auto",
-            marginTop: "40px"
-          }}
-          size="large"
-          onClick={openResume}        >
-          <Text
-            strong
-            style={{ color: "rgb(44, 74, 119)", alignItems: `center`, fontSize: "16px" }}
-          >
-           See more
-          </Text>
-        </Button>
+                  style={{
+                    borderRadius: "12px",
+                    background: "rgba(230, 230, 230, 1)",
+                    border: "none",
+                    boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;",
+                    height: "50px",
+                    width: "auto",
+                    marginTop: "40px",
+                  }}
+                  size="large"
+                  onClick={openResume}
+                >
+                  <Text
+                    strong
+                    style={{
+                      color: "rgb(44, 74, 119)",
+                      alignItems: `center`,
+                      fontSize: "16px",
+                    }}
+                  >
+                    See more
+                  </Text>
+                </Button>
               </Space>
               <figure>
                 <Image
                   src={Programming.src}
                   alt="card-two"
-                  width={700}
-                  height={700} 
+                  width={500}
+                  height={500}
                 />
               </figure>
             </Flex>
-          </li>
+          </Col>
 
-          
-
-          <li className="card" id="card-4">
+          <Col className="card" id="card-4">
             <Flex className="card-content">
               <Space>
                 <Title
@@ -276,7 +282,7 @@ const Works: React.FC = () => {
                   style={{
                     color: "white",
                     fontFamily: "cursive",
-                    textAlign: "center",
+                   
                     fontSize: "38px",
                   }}
                 >
@@ -288,15 +294,17 @@ const Works: React.FC = () => {
                     fontSize: "18px",
                   }}
                 >
-                  <CiCircleCheck /> Built patient registration and appointment scheduling modules.
-                </Text> 
+                  <CiCircleCheck /> Built patient registration and appointment
+                  scheduling modules.
+                </Text>
                 <Text
                   style={{
                     color: "rgba(255, 255, 255, 0.8)",
                     fontSize: "18px",
                   }}
                 >
-                  <CiCircleCheck /> Contributed to real-time analytics for healthcare insights.
+                  <CiCircleCheck /> Contributed to real-time analytics for
+                  healthcare insights.
                 </Text>
                 <Text
                   style={{
@@ -305,7 +313,6 @@ const Works: React.FC = () => {
                   }}
                 >
                   <CiCircleCheck /> Developed the HMS frontend with React/Redux.
-
                 </Text>
                 <Text
                   style={{
@@ -315,7 +322,7 @@ const Works: React.FC = () => {
                 >
                   <CiCircleCheck /> Customized UI for compliance with HIPAA.
                 </Text>
-               
+
                 <Text
                   style={{
                     color: "rgba(255, 255, 255, 0.8)",
@@ -324,38 +331,38 @@ const Works: React.FC = () => {
                 >
                   <CiCircleCheck /> Designed responsive, intuitive interfaces.
                 </Text>
-                
+
                 <Button
-          style={{
-            borderRadius: "12px",
-            background: "rgba(230, 230, 230, 1)",
-            border: "none",
-            boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
-            height: "50px",
-            width: "auto",
-            marginTop: "40px"
-          }}
-          size="large"
-          onClick={openResume}        >
-          <Text
-            strong
-            style={{ color: "rgb(44, 74, 119)", alignItems: `center`, fontSize: "16px" }}
-          >
-           See more
-          </Text>
-        </Button>
+                  style={{
+                    borderRadius: "12px",
+                    background: "rgba(230, 230, 230, 1)",
+                    border: "none",
+                    boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+                    height: "50px",
+                    width: "auto",
+                    marginTop: "40px",
+                  }}
+                  size="large"
+                  onClick={openResume}
+                >
+                  <Text
+                    strong
+                    style={{
+                      color: "rgb(44, 74, 119)",
+                      alignItems: `center`,
+                      fontSize: "16px",
+                    }}
+                  >
+                    See more
+                  </Text>
+                </Button>
               </Space>
               <figure>
-                <Image
-                  src={Girl.src}
-                  alt="card-one"
-                  width={500}
-                  height={500} 
-                />
+                <Image src={Girl.src} alt="card-thre" width={500} height={500} />
               </figure>
             </Flex>
-          </li>
-        </ul>
+          </Col>
+        </Row>
       </Flex>
     </Flex>
   );
