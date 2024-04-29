@@ -3,10 +3,16 @@ import { Button, Col, Flex, Row, Space, Typography } from "antd";
 import React from "react";
 import Image from "next/image";
 import CoverImage from "../app/assets/cover.jpeg";
+import { useRouter } from "next/navigation";
 
 const { Title, Text } = Typography;
 
 const AboutMe = () => {
+  const { push } = useRouter();
+
+  const handleRedirect = (url: string) => () => {
+    push(url);
+  };
   return (
     <Row
       gutter={[16, 16]}
@@ -79,6 +85,7 @@ const AboutMe = () => {
               height: "50px",
               opacity: "1",
             }}
+            onClick={handleRedirect(`/about-me`)}
             size="large"
           >
             <Text

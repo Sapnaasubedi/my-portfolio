@@ -1,6 +1,7 @@
 import AboutMe from "@/modules/About";
+import AboutHeroPage from "@/modules/AboutMe/AboutHero";
+import BeyondPortfolio from "@/modules/AboutMe/BeyondPortfolio";
 import Contact from "@/modules/Contact";
-import Experience from "@/modules/Experience";
 import Footer from "@/modules/Footer";
 
 import HeroPage from "@/modules/HeroSection";
@@ -14,10 +15,9 @@ const page = () => {
   return (
     <div>
       {/* <Navbar /> */}
-      <HeroPage />
+      <AboutHeroPage />
       <Social/>
-      <Works/>
-     <AboutMe/>
+      <BeyondPortfolio/>
      {/* <Experience/> */}
      {/* <Skills/> */}
      <Contact/>

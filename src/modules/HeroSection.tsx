@@ -41,7 +41,7 @@ const HeroPage: React.FC = () => {
         <span
           style={{
             background:
-              "linear-gradient(6983deg, var(--token-e4fe9052-f52e-4ea9-884d-9d363b322bb6, rgb(81, 137, 221)) 0%, rgb(200, 213, 235) 100%)",
+              " ",
             WebkitBackgroundClip: `text`,
             WebkitTextFillColor: `transparent`,
           

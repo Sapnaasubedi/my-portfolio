@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+.container {
+  padding: 80px;
+  display: flex;
+  overflow-x: auto;
+}
+.cards-wrapper {
+  display: flex; /* Horizontal Flex layout */
+  justify-content: flex-start; /* Align cards at the beginning */
+}
+.hero-heading {
+  font-size: 5.5rem;
+  margin: 10px 0;
+}
+.hero-title {
+  font-size: 1rem;
+  max-width: 700px;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .hero-heading {
+    font-size: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 0.6rem;
+  }
+}
+
+.about-card {
+  display: flex;
+  height: 280px;
+  width: 200px;
+  background-color: #17141d;
+  border-radius: 10px;
+  box-shadow: -1rem 0 3rem #000;
+  transition: 1s ease-out;
+  flex-shrink: 0;
+  flex-direction: column;
+
+  left: 0px;
+  border: none;
+}
+
+.about-card:not(:first-child) {
+  margin-left: -60px;
+}
+
+.about-card:hover {
+  transform: translateY(-20px);
+  transition: 1s ease-out;
+}
+
+.about-card:hover ~ .about-card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+@media (max-width: 768px) {
+  .hero-heading {
+    font-size: 1.9rem;
+  }
+
+  .hero-title {
+    font-size: 0.9rem;
+  } /* Tablet and smaller screens */
+  .container {
+    padding: 20px; /* Reduced padding */
+    flex-wrap: nowrap; /* No wrapping for horizontal scrolling */
+  }
+
+  .about-card {
+    width: 150px; /* Smaller width for smaller screens */
+    height: 210px;
+
+    animation-name: infiniteScroll;
+    animation-duration: 11s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  .about-card:not(:first-child) {
+    margin-left: 20px;
+  }
+  /*  */
+}
+
+@media (max-width: 480px) {
+  .hero-heading {
+    font-size: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 0.6rem;
+  }
+
+  .about-card {
+    width: 150px;
+    height: 210px;
+    animation-name: infiniteScroll;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  .about-card:not(:first-child) {
+    margin-left: 20px;
+  }
+}
+.star {
+  filter: drop-shadow(rgb(241, 243, 243) 11px 11px 11px);
+  transform: rotateZ(-60deg);
+  animation-name: spin;
+  animation-duration: 2000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  background: rgba(225, 224, 224, 0);
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes infiniteScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.horizontal-scrolling-items {
+  display: flex;
+  font-size: 24px;
+  animation: infiniteScroll 21s linear infinite;
+  color: rgba(192, 166, 255, 1);
+  font-family: Lobster;
+}
+.horizontal-scrolling-items__item {
+  white-space: nowrap;
+}
