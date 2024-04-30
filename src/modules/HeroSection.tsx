@@ -58,7 +58,7 @@ const HeroPage: React.FC = () => {
             borderRadius: "12px",
             background: "rgba(230, 230, 230, 1)",
             border: "none",
-            boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;",
+            boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
             height: "50px",
             width: "auto",
           }}
@@ -77,7 +77,7 @@ const HeroPage: React.FC = () => {
             borderRadius: "12px",
             background: "none 0% 0% ",
             border: "1px solid rgba(255, 255, 255, 0.2)",
-            boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;",
+            boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
             height: "50px",
             width: "auto",
           }}

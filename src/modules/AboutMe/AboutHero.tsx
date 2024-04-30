@@ -51,11 +51,7 @@ const AboutHeroPage: React.FC = () => {
       </h1>
       <Text
       className="hero-title"
-        // style={{
-        //   maxWidth: "700px",
-        //   textAlign: "center",
-        //   color: "rgba(255, 255, 255, 0.5)",
-        // }}
+       
       >
         Traveling keeps me grounded. Meeting new people, exploring diverse
         cultures & cuisines allow me to view things from a fresh perspective.
