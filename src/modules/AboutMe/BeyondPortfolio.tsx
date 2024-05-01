@@ -6,17 +6,11 @@ import { HiSparkles } from "react-icons/hi";
 const { Title, Text } = Typography;
 import Spark from "@/app/assets/spark.png";
 import Book from "@/app/assets/Book.webp";
+import BoBa from "@/app/assets/boba.gif";
+
 import "../styles/Herosection.css";
 import { InfiniteLoopSlider, TAG_ICONS, Tag } from "./InfiniteLoop";
-import {
-  FaAws,
-  FaCss3Alt,
-  FaHtml5,
-  FaJsSquare,
-  FaPython,
-  FaReact,
-} from "react-icons/fa";
-import { SiMongodb, SiNextdotjs, SiRedux, SiTypescript } from "react-icons/si";
+
 
 const BeyondPortfolio = () => {
   return (
@@ -103,7 +97,6 @@ const BeyondPortfolio = () => {
             border: "1px solid rgba(255, 255, 255, 0.2)",
             overflow: "hidden",
             opacity: "1",
-            height:"100%"
           }}
         >
           <Space direction="vertical" size="large">
@@ -137,6 +130,16 @@ const BeyondPortfolio = () => {
             </div>
           </Space>
         </Card>
+        <Card style={{
+              background:
+                "linear-gradient(99.69833281472663deg, var(--token-e4fe9052-f52e-4ea9-884d-9d363b322bb6, rgb(81, 137, 221)) 0%, var(--token-690b9193-65fe-4a18-9337-7cb47aa60643, rgb(178, 202, 235)) 100%)",
+              opacity: 1,
+              borderRadius: "12px",
+            marginTop:"20px",
+            border:"none"
+            }}> <Space><Image src={BoBa.src} height={80} width={80} alt="" /><Text  style={{fontFamily:"Lobster", color:"black", }}>Chug thick shakes and work without breaks is my mantra!</Text></Space> 
+
+            </Card>
       </Col>
       <Col xs={24} sm={24} md={12} lg={5}>
         <Card

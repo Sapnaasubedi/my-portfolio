@@ -129,37 +129,7 @@ const AboutHeroPage: React.FC = () => {
       </Flex></div>
      
       
-      <div className="horizontal-scrolling-items">
-       
-        <div className="horizontal-scrolling-items__item">
-         Still here ✨ Then stay tuned to explore my work , life , and hobbies!  🌸 Still here ✨ Then stay tuned to
-          explore my work, life, and hobbies! 🌸 Still here ✨ Then stay tuned to
-          explore my work, life, and hobbies! 🌸 Still here ✨ Then stay tuned to
-          explore my work, life, and hobbies! 🌸 Still here ✨ Then stay tuned to
-          explore my work, life, and hobbies! 🌸 Still here ✨ Then stay tuned to
-          explore my work, life, and hobbies! 🌸 Still here ✨ Then stay tuned to
-          explore my work, life, and hobbies! 🌸 Still here ✨ Then stay tuned to
-          explore my work, life, and hobbies! 🌸 Still here ✨ Then stay tuned to
-          explore my work, life, and hobbies! 🌸 Still here ✨ Then stay tuned to
-          explore my work, life, and hobbies! 🌸 Still here ✨ Then stay tuned to
-          explore my work, life, and hobbies! 🌸Still here ✨ Then stay tuned to
-          explore my work, life, and hobbies! 🌸
-        </div>
-        <div className="horizontal-scrolling-items__item">
-         Still here ✨ Then stay tuned to explore my work , life , and hobbies!  🌸 Still here ✨ Then stay tuned to
-          explore my work, life, and hobbies! 🌸 Still here ✨ Then stay tuned to
-          explore my work, life, and hobbies! 🌸 Still here ✨ Then stay tuned to
-          explore my work, life, and hobbies! 🌸 Still here ✨ Then stay tuned to
-          explore my work, life, and hobbies! 🌸 Still here ✨ Then stay tuned to
-          explore my work, life, and hobbies! 🌸 Still here ✨ Then stay tuned to
-          explore my work, life, and hobbies! 🌸 Still here ✨ Then stay tuned to
-          explore my work, life, and hobbies! 🌸 Still here ✨ Then stay tuned to
-          explore my work, life, and hobbies! 🌸 Still here ✨ Then stay tuned to
-          explore my work, life, and hobbies! 🌸 Still here ✨ Then stay tuned to
-          explore my work, life, and hobbies! 🌸Still here ✨ Then stay tuned to
-          explore my work, life, and hobbies! 🌸
-        </div>
-      </div>
+     
       
     </Flex>
   );

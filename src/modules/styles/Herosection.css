@@ -171,7 +171,30 @@ h1 {
   }
  
 }
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensure it appears above other elements */
+  background-color: transparent; /* Transparent background */
+  transition: background-color 0.3s ease; 
+  background-color: rgba(255, 255, 255, 0.08); /* Opaque background when sticky */
+  box-shadow: rgba(0, 0, 0, 0.1) -1px 2px 12px 0px; 
+  border-radius: 100px;
+  border: 1px solid #4D4D4D;
+  margin: 20px;
+  width: 450px;
+  margin-left: 40%;
+}
 
+.navbar.sticky {
+  background-color: rgba(255, 255, 255, 0.08); /* Opaque background when sticky */
+  box-shadow: rgba(0, 0, 0, 0.1) -1px 2px 12px 0px; 
+  border-radius: 100px;
+  border: 1px solid #4D4D4D;
+  margin: 20px;
+  margin-left: 40%;
+
+}
 
 @supports (animation-timeline: works) {
   @scroll-timeline cards-element-scrolls-in-body {

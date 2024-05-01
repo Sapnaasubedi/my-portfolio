@@ -18,7 +18,7 @@ const Works: React.FC = () => {
     );
   };
   return (
-    <Flex vertical style={{ justifyContent: "center", padding: `130px 0` }}>
+    <Flex vertical style={{ justifyContent: "center", padding: `130px 0` }} id="works">
       <Space direction="vertical" size="small">
         <Title
           level={5}

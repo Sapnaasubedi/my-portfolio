@@ -20,9 +20,8 @@ const Contact = () => {
   return (
     <div
       style={{
-        background: "#282828",
-        padding: "20px",
-        marginTop: "50px",
+        
+        marginTop: "150px",
       }}
     >
      
@@ -81,7 +80,7 @@ const Contact = () => {
                   <p
                     style={{
                       lineHeight: `92px`,
-                      fontFamily: `bbkk`,
+                      fontFamily: `Lobster`,
                       fontWeight: `900`,
                       fontSize: `62px`,
                       
@@ -90,7 +89,7 @@ const Contact = () => {
                   >
                     <span
                       style={{
-                        color: `rgba(40, 104, 75, 1)`,
+                        color: `rgba(46,60,134,1)`,
                       }}
                     >
                       Say Hi!

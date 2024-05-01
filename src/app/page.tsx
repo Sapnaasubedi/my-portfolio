@@ -4,6 +4,7 @@ import Experience from "@/modules/Experience";
 import Footer from "@/modules/Footer";
 
 import HeroPage from "@/modules/HeroSection";
+import Navbar from "@/modules/Navbar";
 import Skills from "@/modules/Skills";
 import Social from "@/modules/Social";
 import Works from "@/modules/Works";
@@ -13,13 +14,13 @@ import React from "react";
 const page = () => {
   return (
     <div>
-      {/* <Navbar /> */}
+      <Navbar />
       <HeroPage />
       <Social/>
       <Works/>
      <AboutMe/>
      {/* <Experience/> */}
-     {/* <Skills/> */}
+     <Skills/>
      <Contact/>
      <Footer/>
     </div>
