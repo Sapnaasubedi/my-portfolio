@@ -1,56 +1,96 @@
 "use client";
-import React, { FC } from "react";
-import { Col, Row, Space, Typography } from "antd";
-import { FaFacebookF, FaGithub, FaLinkedin } from "react-icons/fa";
+import React, { FC, useEffect, useState } from "react";
+import { Button, Drawer, Flex, Space, Typography } from "antd";
+import { useRouter } from "next/navigation";
+import { MenuOutlined } from "@ant-design/icons";
 
 const { Title } = Typography;
 
 const Navbar: FC = () => {
+  const [isSticky, setIsSticky] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  const handleScroll = () => {
+    setIsSticky(window.scrollY > 50); 
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
-  
+  const { push } = useRouter();
+
+  const handleRedirect = (url: string) => () => {
+    push(url);
+  };
+  const toggleDrawer = () => {
+    setDrawerOpen(!drawerOpen);
+  };
+
   return (
-    <div
-    style={{
-      marginLeft: `200px`,
-    }}>
-      <Row justify="center">
-        <Col span={12}>
-          <Space size="large">
-            <Title level={5} onClick={() => scrollToSection("works")}>WORKS</Title>
-            <Title level={5} onClick={() => scrollToSection("contact")}>CONTACT</Title>
-            <Title level={5} onClick={() => scrollToSection("skills")}>SKILLS</Title>
-          </Space>
-        </Col>
-       
-        <Col span={4}>
-          <Space size="large" >
-            <a
-              href="https://github.com/Sapnaasubedi"
-              style={{ color: "black" }}
-            >
-              <FaGithub size={25} />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/sapana-subedi-77227720a/"
-              style={{ color: "black" }}
-            >
-              <FaLinkedin size={25} />
-            </a>
-            <a
-              href="https://www.facebook.com/profile.php?id=100010663329163"
-              style={{ color: "black" }}
-            >
-              <FaFacebookF size={25} />
-            </a>
-          </Space>
-        </Col>
-      </Row>
-    </div>
+    <Flex justify="center" className={`navbar ${isSticky ? "sticky" : ""}`}>
+      <Space size="large" style={{ marginTop: "-15px" }} >
+      <Title
+          level={5}
+          style={{
+            color: "white",
+            fontFamily: "cursive",
+          }}
+          onClick={handleRedirect(`/`)}
+        >
+          HOME
+        </Title>
+        <Title
+          level={5}
+          style={{
+            color: "white",
+            fontFamily: "cursive",
+          }}
+          onClick={() => scrollToSection("works")}
+        >
+          WORKS
+        </Title>
+        <Title
+          level={5}
+          style={{
+            color: "white",
+            fontFamily: "cursive",
+          }}
+          onClick={handleRedirect(`/about-me`)}
+        >
+          ABOUT ME
+        </Title>
+        <Title
+          level={5}
+          style={{
+            color: "white",
+            fontFamily: "cursive",
+          }}
+          onClick={() => scrollToSection("skills")}
+        >
+          SKILLS
+        </Title>
+        <Title
+          level={5}
+          style={{
+            color: "white",
+            fontFamily: "cursive",
+          }}
+          onClick={() => scrollToSection("contact")}
+        >
+          CONTACT
+        </Title>
+      </Space>
+     
+    </Flex>
   );
 };
 

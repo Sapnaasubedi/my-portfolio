@@ -1,192 +1,57 @@
 "use client";
-import { Col, Row, Typography, Card } from "antd";
+import { Col, Row, Typography, Card,  Space } from "antd";
 import React from "react";
-import { BiLogoTypescript } from "react-icons/bi";
-import { CgBitbucket } from "react-icons/cg";
-import { DiDjango } from "react-icons/di";
-import {
-  FaFigma,
-  FaGitAlt,
-  FaGithub,
-  FaHtml5,
-  FaNode,
-  FaReact,
-} from "react-icons/fa";
-import { IoLogoJavascript } from "react-icons/io";
-import { MdOutlineCss } from "react-icons/md";
-import {
-  SiAntdesign,
-  SiAxios,
-  SiMaterialdesign,
-  SiPostman,
-  SiSwr,
-} from "react-icons/si";
-import { TbBrandNextjs, TbBrandRedux } from "react-icons/tb";
-import styled from "styled-components";
+import Spark from "@/app/assets/spark.png";
+import Image from "next/image";
+import { InfiniteLoopSlider, TAG_ICONS, Tag } from "./AboutMe/InfiniteLoop";
 
 const { Title, Text } = Typography;
-const StyleCard = styled(Card)`
-  background: #f2f2f2;
-  border-color: #f2f2f2;
 
-  &:hover {
-    background: #d4f1ea;
-  }
-`;
 const Skills = () => {
   return (
-    <div id="skills" style={{ marginBottom: "50px" }}>
-      <Row justify="center" gutter={[20, 20]}>
-        <Col span={13}>
-          <Title level={4}>Skills</Title>
-
-          <Row gutter={[50, 50]}>
-            <Col span={22}>
-              <Text strong type="secondary">
-                Tools and Technologies
+    <Row justify="center" id="skills" style={{ marginTop: "200px" }}>
+      <Col xs={24} sm={24} md={15}>
+        <Card
+          style={{
+            background: "none 0% 0%",
+            borderRadius: "12px",
+            border: "1px solid rgba(255, 255, 255, 0.2)",
+            overflow: "hidden",
+            opacity: "1",
+          }}
+        >
+          <Space direction="vertical" size="large">
+            <Space>
+              <Image src={Spark.src} height={40} width={40} alt="" />
+              <Text style={{ color: "white", fontSize: "24px" }}>
+                My Tech Stacks
               </Text>
-            </Col>
-            <Col span={4}>
-              <StyleCard>
-                <FaHtml5 size={60} />
-              </StyleCard>
-            </Col>
-            <Col span={4}>
-              <StyleCard>
-                <IoLogoJavascript size={60} />
-              </StyleCard>
-            </Col>
-            <Col span={4}>
-              <StyleCard>
-                <BiLogoTypescript size={60} />
-              </StyleCard>
-            </Col>
-            <Col span={4}>
-              <StyleCard>
-                <MdOutlineCss size={60} />
-              </StyleCard>
-            </Col>
-            <Col span={4}>
-              <StyleCard>
-                <FaReact size={60} />
-              </StyleCard>
-            </Col>
-            <Col span={4}>
-              <StyleCard>
-                <TbBrandRedux size={60} />
-              </StyleCard>
-            </Col>
-            <Col span={4}>
-              <StyleCard>
-                <SiAxios size={60} />
-              </StyleCard>
-            </Col>
-            <Col span={4}>
-              <StyleCard>
-                <SiSwr size={60} />
-              </StyleCard>
-            </Col>
-            <Col span={4}>
-              <StyleCard>
-                <SiAntdesign size={60} />
-              </StyleCard>
-            </Col>
-            <Col span={4}>
-              <StyleCard>
-                <SiMaterialdesign size={60} />
-              </StyleCard>
-            </Col>
-            <Col span={4}>
-              <StyleCard>
-                <FaNode size={60} />
-              </StyleCard>
-            </Col>
-            <Col span={4}>
-              <StyleCard>
-                <DiDjango size={60} />
-              </StyleCard>
-            </Col>
-            <Col span={4}>
-              <StyleCard>
-                <SiPostman size={60} />
-              </StyleCard>
-            </Col>
-            <Col span={4}>
-              <StyleCard>
-                <FaFigma size={60} />
-              </StyleCard>
-            </Col>
-            <Col span={4}>
-              <StyleCard>
-                <FaGitAlt size={60} />
-              </StyleCard>
-            </Col>
-            <Col span={4}>
-              <StyleCard>
-                <FaGithub size={60} />
-              </StyleCard>
-            </Col>
-            <Col span={4}>
-              <StyleCard>
-                <CgBitbucket size={60} />
-              </StyleCard>
-            </Col>
-            <Col span={4}>
-              <StyleCard style={{ justifyContent: "space-around" }}>
-                <TbBrandNextjs size={60} />
-              </StyleCard>
-            </Col>
-            <Col span={22}>
-              <Text strong type="secondary">
-                Soft Skills
-              </Text>
-            </Col>
-            <Col span={4}>
-              <StyleCard
-                style={{ textAlign: "center", height: "120px", width: "150px" }}
-              >
-                <Text strong>Time Management</Text>
-              </StyleCard>
-            </Col>
-            <Col span={4}>
-              <StyleCard
-                style={{ textAlign: "center", height: "120px", width: "140px" }}
-              >
-                <Text strong>Teamwork</Text>
-              </StyleCard>
-            </Col>
-            <Col span={4}>
-              <StyleCard
-                style={{ textAlign: "center", height: "120px", width: "140px" }}
-              >
-                <Text strong>Problem-solving</Text>
-              </StyleCard>
-            </Col>
-            <Col span={4}>
-              <StyleCard
-                style={{ textAlign: "center", height: "120px", width: "140px" }}
-              >
-                <Text strong>Creativity</Text>
-              </StyleCard>
-            </Col>
-            <Col span={4}>
-              <StyleCard
-                style={{ textAlign: "center", height: "120px", width: "140px" }}
-              >
-                <Text strong>Adaptability</Text>
-              </StyleCard>
-            </Col>
-            <Col span={4}>
-              <StyleCard
-                style={{ textAlign: "center", height: "120px", width: "140px" }}
-              >
-                <Text strong>Critical thinking</Text>
-              </StyleCard>
-            </Col>
-          </Row>
-        </Col>
-      </Row>
-    </div>
+            </Space>
+            <Title
+              level={5}
+              style={{
+                color: "var(--extracted-r6o4lv, rgba(255, 255, 255, 0.5))",
+                fontSize: "18px",
+                fontWeight: 400,
+                textAlign: "left",
+              }}
+            >
+              I utilized a sophisticated set of tools to deliver a high-quality
+              software development process.
+            </Title>
+            <div className="tag-list">
+              {[...Array(1)].map((_, i) => (
+                <InfiniteLoopSlider key={i} duration={15000} reverse={i % 2}>
+                  {Object.keys(TAG_ICONS).map((tag) => (
+                    <Tag tag={tag} key={tag} />
+                  ))}
+                </InfiniteLoopSlider>
+              ))}
+            </div>
+          </Space>
+        </Card>
+      </Col>
+    </Row>
   );
 };
 
