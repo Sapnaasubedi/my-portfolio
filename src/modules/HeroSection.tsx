@@ -1,16 +1,13 @@
 "use client";
-import React, { useRef } from "react";
+import React from "react";
 import "./styles/Herosection.css";
 import { Button, Flex, Space, Typography } from "antd";
 import Videos from "@/app/assets/pp.png";
-import Flash from "@/app/assets/flash.webp";
-import { MdPhoneInTalk } from "react-icons/md";
 import Image from "next/image";
 
-const { Title, Text } = Typography;
+const {  Text } = Typography;
 
 const HeroPage: React.FC = () => {
- 
   const openResume = () => {
     window.open(
       "https://docs.google.com/document/d/1Cbm4Dwx9xM2m2Arr91B6Hqk58MhCmwkhb7cSWikqnLg/edit?pli=1",
@@ -24,8 +21,7 @@ const HeroPage: React.FC = () => {
     }
   };
   return (
-    <Flex vertical className="hero" >
-    
+    <Flex vertical className="hero">
       <div className="avatar-wrapper">
         <Image
           src={Videos.src}
@@ -40,11 +36,9 @@ const HeroPage: React.FC = () => {
         Exploring the Boundless Horizons of &nbsp;
         <span
           style={{
-            background:
-              " ",
+            background: " ",
             WebkitBackgroundClip: `text`,
             WebkitTextFillColor: `transparent`,
-          
           }}
         >
           Software Development
@@ -52,7 +46,6 @@ const HeroPage: React.FC = () => {
         &nbsp; Odyssey
       </h1>
       <Space>
-    
         <Button
           style={{
             borderRadius: "12px",

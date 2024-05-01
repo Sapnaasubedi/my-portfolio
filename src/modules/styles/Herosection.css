@@ -181,9 +181,9 @@ h1 {
   box-shadow: rgba(0, 0, 0, 0.1) -1px 2px 12px 0px; 
   border-radius: 100px;
   border: 1px solid #4D4D4D;
-  margin: 20px;
   width: 450px;
   margin-left: 40%;
+  align-items:center ;
 }
 
 .navbar.sticky {
@@ -191,9 +191,26 @@ h1 {
   box-shadow: rgba(0, 0, 0, 0.1) -1px 2px 12px 0px; 
   border-radius: 100px;
   border: 1px solid #4D4D4D;
-  margin: 20px;
   margin-left: 40%;
 
+}
+.ham-burger {
+  display:block;
+  color: white; /* Display hamburger button on small screens */
+}
+
+.menu {
+  display: none; /* Hide full menu on small screens */
+}
+
+@media (min-width: 768px) {
+  .ham-burger {
+    display: none;
+  }
+
+  .menu {
+    display: flex; /* Show full menu on larger screens */
+  }
 }
 
 @supports (animation-timeline: works) {

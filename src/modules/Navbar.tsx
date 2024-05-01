@@ -1,11 +1,14 @@
 "use client";
 import React, { FC, useEffect, useState } from "react";
-import { Col, Flex, Row, Space, Typography } from "antd";
+import { Button, Drawer, Flex, Space, Typography } from "antd";
+import { useRouter } from "next/navigation";
+import { MenuOutlined } from "@ant-design/icons";
 
 const { Title } = Typography;
 
 const Navbar: FC = () => {
   const [isSticky, setIsSticky] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
   // Function to check scroll position
   const handleScroll = () => {
@@ -25,57 +28,90 @@ const Navbar: FC = () => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+  const { push } = useRouter();
+
+  const handleRedirect = (url: string) => () => {
+    push(url);
+  };
+  const toggleDrawer = () => {
+    setDrawerOpen(!drawerOpen);
+  };
 
   return (
-    <Flex  justify="center"  className={`navbar ${isSticky ? "sticky" : ""}`}>
-      
-        <Space size="large">
-          <Title
-            level={5}
-            style={{
-              color:"white",
-              fontFamily: "cursive",
-            }}
-            onClick={() => scrollToSection("works")}
-          >
+    <Flex justify="center" className={`navbar ${isSticky ? "sticky" : ""}`}>
+      <Space size="large" style={{ marginTop: "-15px" }} className="menu">
+        <Title
+          level={5}
+          style={{
+            color: "white",
+            fontFamily: "cursive",
+          }}
+          onClick={() => scrollToSection("works")}
+        >
+          WORKS
+        </Title>
+        <Title
+          level={5}
+          style={{
+            color: "white",
+            fontFamily: "cursive",
+          }}
+          onClick={handleRedirect(`/about-me`)}
+        >
+          ABOUT ME
+        </Title>
+        <Title
+          level={5}
+          style={{
+            color: "white",
+            fontFamily: "cursive",
+          }}
+          onClick={() => scrollToSection("skills")}
+        >
+          SKILLS
+        </Title>
+        <Title
+          level={5}
+          style={{
+            color: "white",
+            fontFamily: "cursive",
+          }}
+          onClick={() => scrollToSection("contact")}
+        >
+          CONTACT
+        </Title>
+      </Space>
+      <Button
+        type="text"
+        icon={<MenuOutlined />}
+        onClick={toggleDrawer}
+        className="ham-burger"
+      />
+      <Drawer
+        placement="top"
+        closable={true}
+        onClose={toggleDrawer}
+        open={drawerOpen}
+      >
+        <Space
+          direction="vertical"
+          size="large"
+          style={{ fontFamily: "cursive" }}
+        >
+          <Title level={5} onClick={() => scrollToSection("works")}>
             WORKS
           </Title>
-          <Title
-            level={5}
-            style={{
-              color:"white",
-              fontFamily: "cursive",
-
-           
-            }}
-            onClick={() => scrollToSection("contact")}
-          >
+          <Title level={5} onClick={() => handleRedirect("/about-me")}>
             ABOUT ME
           </Title>
-          <Title
-            level={5}
-            style={{
-              color:"white",
-              fontFamily: "cursive",
-
-            }}
-            onClick={() => scrollToSection("skills")}
-          >
+          <Title level={5} onClick={() => scrollToSection("skills")}>
             SKILLS
-          </Title><Title
-            level={5}
-            style={{
-              color:"white",
-              fontFamily: "cursive",
-
-           
-            }}
-            onClick={() => scrollToSection("contact")}
-          >
+          </Title>
+          <Title level={5} onClick={() => scrollToSection("contact")}>
             CONTACT
           </Title>
         </Space>
-      
+      </Drawer>
     </Flex>
   );
 };

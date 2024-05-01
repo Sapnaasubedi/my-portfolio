@@ -8,8 +8,7 @@ import {
   FaPython,
   FaReact,
 } from "react-icons/fa";
-import { SiMongodb, SiNextdotjs, SiRedux, SiTypescript } from "react-icons/si";
-import { PiWebhooksLogoFill } from "react-icons/pi";
+import { SiMongodb, SiNextdotjs, SiTypescript } from "react-icons/si";
 import { BiLogoRedux } from "react-icons/bi";
 
 interface InfiniteLoopSliderProps {

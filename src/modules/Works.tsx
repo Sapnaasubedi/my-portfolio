@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Card, Typography, Row, Col, Flex, Space, Button, Divider } from "antd";
+import { Typography, Row, Col, Flex, Space, Button } from "antd";
 import "./styles/Herosection.css";
 import Image from "next/image";
 import Takeobg from "@/app/assets/takeobg.png";
@@ -18,7 +18,11 @@ const Works: React.FC = () => {
     );
   };
   return (
-    <Flex vertical style={{ justifyContent: "center", padding: `130px 0` }} id="works">
+    <Flex
+      vertical
+      style={{ justifyContent: "center", padding: `130px 0` }}
+      id="works"
+    >
       <Space direction="vertical" size="small">
         <Title
           level={5}
@@ -174,7 +178,7 @@ const Works: React.FC = () => {
                   style={{
                     color: "white",
                     fontFamily: "cursive",
-                 
+
                     fontSize: "38px",
                   }}
                 >
@@ -282,7 +286,7 @@ const Works: React.FC = () => {
                   style={{
                     color: "white",
                     fontFamily: "cursive",
-                   
+
                     fontSize: "38px",
                   }}
                 >
@@ -358,7 +362,12 @@ const Works: React.FC = () => {
                 </Button>
               </Space>
               <figure>
-                <Image src={Girl.src} alt="card-thre" width={500} height={500} />
+                <Image
+                  src={Girl.src}
+                  alt="card-thre"
+                  width={500}
+                  height={500}
+                />
               </figure>
             </Flex>
           </Col>

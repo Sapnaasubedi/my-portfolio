@@ -1,8 +1,6 @@
 import AboutMe from "@/modules/About";
 import Contact from "@/modules/Contact";
-import Experience from "@/modules/Experience";
 import Footer from "@/modules/Footer";
-
 import HeroPage from "@/modules/HeroSection";
 import Navbar from "@/modules/Navbar";
 import Skills from "@/modules/Skills";
@@ -19,7 +17,6 @@ const page = () => {
       <Social/>
       <Works/>
      <AboutMe/>
-     {/* <Experience/> */}
      <Skills/>
      <Contact/>
      <Footer/>

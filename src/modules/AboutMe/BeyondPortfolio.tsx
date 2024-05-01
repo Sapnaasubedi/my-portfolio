@@ -1,8 +1,7 @@
 "use client";
-import { Button, Card, Col, Flex, Row, Space, Typography } from "antd";
+import { Button, Card, Col, Row, Space, Typography } from "antd";
 import Image from "next/image";
-import React, { FC } from "react";
-import { HiSparkles } from "react-icons/hi";
+import React from "react";
 const { Title, Text } = Typography;
 import Spark from "@/app/assets/spark.png";
 import Book from "@/app/assets/Book.webp";
@@ -10,7 +9,6 @@ import BoBa from "@/app/assets/boba.gif";
 
 import "../styles/Herosection.css";
 import { InfiniteLoopSlider, TAG_ICONS, Tag } from "./InfiniteLoop";
-
 
 const BeyondPortfolio = () => {
   return (
@@ -130,16 +128,24 @@ const BeyondPortfolio = () => {
             </div>
           </Space>
         </Card>
-        <Card style={{
-              background:
-                "linear-gradient(99.69833281472663deg, var(--token-e4fe9052-f52e-4ea9-884d-9d363b322bb6, rgb(81, 137, 221)) 0%, var(--token-690b9193-65fe-4a18-9337-7cb47aa60643, rgb(178, 202, 235)) 100%)",
-              opacity: 1,
-              borderRadius: "12px",
-            marginTop:"20px",
-            border:"none"
-            }}> <Space><Image src={BoBa.src} height={80} width={80} alt="" /><Text  style={{fontFamily:"Lobster", color:"black", }}>Chug thick shakes and work without breaks is my mantra!</Text></Space> 
-
-            </Card>
+        <Card
+          style={{
+            background:
+              "linear-gradient(99.69833281472663deg, var(--token-e4fe9052-f52e-4ea9-884d-9d363b322bb6, rgb(81, 137, 221)) 0%, var(--token-690b9193-65fe-4a18-9337-7cb47aa60643, rgb(178, 202, 235)) 100%)",
+            opacity: 1,
+            borderRadius: "12px",
+            marginTop: "20px",
+            border: "none",
+          }}
+        >
+          {" "}
+          <Space>
+            <Image src={BoBa.src} height={80} width={80} alt="" />
+            <Text style={{ fontFamily: "Lobster", color: "black" }}>
+              Chug thick shakes and work without breaks is my mantra!
+            </Text>
+          </Space>
+        </Card>
       </Col>
       <Col xs={24} sm={24} md={12} lg={5}>
         <Card
@@ -262,7 +268,7 @@ const BeyondPortfolio = () => {
             }}
           >
             <Text strong style={{ color: "black", fontSize: "20px" }}>
-            Adventurous ⛷️
+              Adventurous ⛷️
             </Text>
           </Button>
         </Card>

@@ -1,10 +1,8 @@
-"use client"
+"use client";
 import { Col, Row, Space, Typography } from "antd";
 import React from "react";
 import { CgMail } from "react-icons/cg";
 import { FaFacebookSquare, FaGithubSquare, FaLinkedin } from "react-icons/fa";
-import Footer from "../app/assets/footer.png";
-import Image from "next/image";
 import "./styles/animation.css";
 
 const { Title } = Typography;
@@ -13,18 +11,16 @@ const Contact = () => {
   const openResume = () => {
     window.open(
       "https://docs.google.com/document/d/1Cbm4Dwx9xM2m2Arr91B6Hqk58MhCmwkhb7cSWikqnLg/edit?pli=1",
-      "_blank"
+      "_blank",
     );
   };
 
   return (
     <div
       style={{
-        
         marginTop: "150px",
       }}
     >
-     
       <div id="contact" style={{ padding: "20px" }}>
         <Row justify="center" gutter={[16, 16]} align="middle">
           <Col xs={24} sm={24} md={12} lg={10} xl={8}>
@@ -32,7 +28,7 @@ const Contact = () => {
               Yay! You&apos;ve made it to the end of quite the scroll.
             </Title>
             <Title
-           level={5}
+              level={5}
               style={{
                 fontSize: "16px",
                 fontWeight: 400,
@@ -45,7 +41,10 @@ const Contact = () => {
               already friends. So why not in this one? :P Reach me at
             </Title>
             <Space size="large" style={{ marginTop: "20px" }}>
-              <a href="https://github.com/Sapnaasubedi" style={{ color: "black" }}>
+              <a
+                href="https://github.com/Sapnaasubedi"
+                style={{ color: "black" }}
+              >
                 <FaGithubSquare size={35} color="white" />
               </a>
               <a
@@ -83,7 +82,6 @@ const Contact = () => {
                       fontFamily: `Lobster`,
                       fontWeight: `900`,
                       fontSize: `62px`,
-                      
                     }}
                     className="view-mode unstyled style-65ac04ad-3889-4baa-a93e-455d2dc05593"
                   >

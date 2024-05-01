@@ -1,5 +1,5 @@
 "use client";
-import { Col, Row, Typography, Card, Button, Space } from "antd";
+import { Col, Row, Typography, Card,  Space } from "antd";
 import React from "react";
 import Spark from "@/app/assets/spark.png";
 import Image from "next/image";
@@ -9,7 +9,7 @@ const { Title, Text } = Typography;
 
 const Skills = () => {
   return (
-    <Row justify="center" id="skills" style={{marginTop:"200px"}}>
+    <Row justify="center" id="skills" style={{ marginTop: "200px" }}>
       <Col xs={24} sm={24} md={15}>
         <Card
           style={{
@@ -27,8 +27,8 @@ const Skills = () => {
                 My Tech Stacks
               </Text>
             </Space>
-            <Title 
-            level={5}
+            <Title
+              level={5}
               style={{
                 color: "var(--extracted-r6o4lv, rgba(255, 255, 255, 0.5))",
                 fontSize: "18px",

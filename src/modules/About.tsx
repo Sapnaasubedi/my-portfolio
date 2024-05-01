@@ -16,14 +16,19 @@ const AboutMe = () => {
   return (
     <Row
       gutter={[16, 16]}
-      style={{ padding: "20px", justifyContent: "center", alignItems: "center" }}
+      style={{
+        padding: "20px",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
     >
       <Col xs={24} sm={24} md={12} lg={10}>
-        <Space direction="vertical" style={{ textAlign: "left",  }}>
+        <Space direction="vertical" style={{ textAlign: "left" }}>
           <Title
             level={5}
             style={{
-              background: "linear-gradient(90deg, rgba(46,60,134,1) 0%, rgba(103,141,228,1) 53%, rgba(61,61,89,1) 100%)",
+              background:
+                "linear-gradient(90deg, rgba(46,60,134,1) 0%, rgba(103,141,228,1) 53%, rgba(61,61,89,1) 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               letterSpacing: "0.4em",
@@ -59,21 +64,21 @@ const AboutMe = () => {
               fontSize: "20px",
               fontWeight: 200,
               lineHeight: "30px",
-              fontFamily: "cursive"
+              fontFamily: "cursive",
             }}
           >
-           Hello! I&apos;m a seasoned software developer with a passion for
-          innovation and problem-solving. I specialize in crafting clean,
-          efficient code that transforms ideas into reality. My love for
-          technology extends beyond the screen—I believe in using software to
-          make a positive impact in people&apos;s lives.Aim to leverage deep
-          technical acumen and diverse industry experience to drive software
-          innovation and efficiency in a challenging contractor role. Focused on
-          delivering high-quality, scalable solutions that enhance user
-          engagement and operational excellence. Let&apos;s collaborate on
-          projects that push boundaries and inspire change. When I&apos;m not
-          coding, you can find me exploring the outdoors. Let&apos;s connect and
-          create something amazing together!
+            Hello! I&apos;m a seasoned software developer with a passion for
+            innovation and problem-solving. I specialize in crafting clean,
+            efficient code that transforms ideas into reality. My love for
+            technology extends beyond the screen—I believe in using software to
+            make a positive impact in people&apos;s lives.Aim to leverage deep
+            technical acumen and diverse industry experience to drive software
+            innovation and efficiency in a challenging contractor role. Focused
+            on delivering high-quality, scalable solutions that enhance user
+            engagement and operational excellence. Let&apos;s collaborate on
+            projects that push boundaries and inspire change. When I&apos;m not
+            coding, you can find me exploring the outdoors. Let&apos;s connect
+            and create something amazing together!
           </Text>
 
           <Button
@@ -88,10 +93,7 @@ const AboutMe = () => {
             onClick={handleRedirect(`/about-me`)}
             size="large"
           >
-            <Text
-              strong
-              style={{ color: "white", fontSize: "16px" }}
-            >
+            <Text strong style={{ color: "white", fontSize: "16px" }}>
               Know more
             </Text>
           </Button>
