@@ -118,8 +118,7 @@ const BeyondPortfolio = () => {
               software development process.
             </Title>
             <div className="tag-list">
-              \{" "}
-              {[...Array(1)].map((_, i) => (
+\              {[...Array(1)].map((_, i) => (
                 <InfiniteLoopSlider
                   key={i}
                   duration={15000}
