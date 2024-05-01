@@ -1,9 +1,14 @@
 "use client";
-import { Col, Row, Typography, Card,  Space } from "antd";
+import { Col, Row, Typography, Card, Space } from "antd";
 import React from "react";
 import Spark from "@/app/assets/spark.png";
 import Image from "next/image";
-import { InfiniteLoopSlider, TAG_ICONS, Tag } from "./AboutMe/InfiniteLoop";
+import {
+  InfiniteLoopSlider,
+  TAG_ICONS,
+  Tag,
+  ValidTags,
+} from "./AboutMe/InfiniteLoop";
 
 const { Title, Text } = Typography;
 
@@ -41,10 +46,15 @@ const Skills = () => {
             </Title>
             <div className="tag-list">
               {[...Array(1)].map((_, i) => (
-                <InfiniteLoopSlider key={i} duration={15000} reverse={i % 2}>
-                  {Object.keys(TAG_ICONS).map((tag) => (
-                    <Tag tag={tag} key={tag} />
-                  ))}
+                <InfiniteLoopSlider
+                  key={i}
+                  duration={15000}
+                  reverse={!!(i % 2)}
+                >
+                {Object.keys(TAG_ICONS).map((tag) => {
+                    const validTag = tag as ValidTags;
+                    return <Tag tag={validTag} key={tag} />;
+                  })}
                 </InfiniteLoopSlider>
               ))}
             </div>

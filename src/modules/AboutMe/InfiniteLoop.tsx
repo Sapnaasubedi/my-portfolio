@@ -10,7 +10,8 @@ import {
 } from "react-icons/fa";
 import { SiMongodb, SiNextdotjs, SiTypescript } from "react-icons/si";
 import { BiLogoRedux } from "react-icons/bi";
-type ValidTags = keyof typeof TAG_ICONS;
+
+export type ValidTags = keyof typeof TAG_ICONS;
 
 interface InfiniteLoopSliderProps {
   children: React.ReactNode;
