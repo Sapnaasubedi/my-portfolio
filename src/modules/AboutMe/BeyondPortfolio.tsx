@@ -8,7 +8,7 @@ import Book from "@/app/assets/Book.webp";
 import BoBa from "@/app/assets/boba.gif";
 
 import "../styles/Herosection.css";
-import { InfiniteLoopSlider, TAG_ICONS, Tag } from "./InfiniteLoop";
+import { InfiniteLoopSlider, TAG_ICONS, Tag, ValidTags } from "./InfiniteLoop";
 
 const BeyondPortfolio = () => {
   return (
@@ -118,11 +118,17 @@ const BeyondPortfolio = () => {
               software development process.
             </Title>
             <div className="tag-list">
+              \{" "}
               {[...Array(1)].map((_, i) => (
-                <InfiniteLoopSlider key={i} duration={15000} reverse={i % 2}>
-                  {Object.keys(TAG_ICONS).map((tag) => (
-                    <Tag tag={tag} key={tag} />
-                  ))}
+                <InfiniteLoopSlider
+                  key={i}
+                  duration={15000}
+                  reverse={!!(i % 2)}
+                >
+                  {Object.keys(TAG_ICONS).map((tag) => {
+                    const validTag = tag as ValidTags;
+                    return <Tag tag={validTag} key={tag} />;
+                  })}
                 </InfiniteLoopSlider>
               ))}
             </div>
