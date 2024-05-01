@@ -182,7 +182,7 @@ const BeyondPortfolio = () => {
               transform: "rotate(42deg) translateZ(0px)",
               opacity: 1,
               borderRadius: "41px",
-              left: "200px",
+              left: "60px",
               top: "100px",
             }}
           >
@@ -199,7 +199,7 @@ const BeyondPortfolio = () => {
               opacity: 1,
               borderRadius: "41px",
               width: "170px",
-              right: "50px",
+              right: "40px",
               top: "50px",
             }}
           >
@@ -216,7 +216,7 @@ const BeyondPortfolio = () => {
               opacity: 1,
               borderRadius: "41px",
               top: "250px",
-              left: "40px",
+              left: "60px",
             }}
           >
             <Text strong style={{ color: "black", fontSize: "20px" }}>
@@ -231,7 +231,7 @@ const BeyondPortfolio = () => {
               transform: "rotate(-10deg) translateZ(0px)",
               opacity: 1,
               borderRadius: "41px",
-              right: "160px",
+              right: "40px",
               top: "90px",
             }}
           >
@@ -247,8 +247,8 @@ const BeyondPortfolio = () => {
               transform: "rotate(50deg) translateZ(0px)",
               opacity: 1,
               borderRadius: "41px",
-              top: "200px",
-              left: "200px",
+              top: "280px",
+              left: "20px",
             }}
           >
             <Text strong style={{ color: "black", fontSize: "20px" }}>
@@ -263,8 +263,8 @@ const BeyondPortfolio = () => {
               transform: "rotate(20deg) translateZ(0px)",
               opacity: 1,
               borderRadius: "41px",
-              top: "80px",
-              left: "150px",
+              top: "50px",
+              left: "180px",
             }}
           >
             <Text strong style={{ color: "black", fontSize: "20px" }}>

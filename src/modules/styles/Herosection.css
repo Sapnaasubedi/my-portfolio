@@ -145,8 +145,37 @@ h1 {
   object-fit: fill; 
   border-radius: 0.4em; 
 }
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensure it appears above other elements */
+  background-color: transparent; /* Transparent background */
+  transition: background-color 0.3s ease; 
+  background-color: rgba(255, 255, 255, 0.08); /* Opaque background when sticky */
+  box-shadow: rgba(0, 0, 0, 0.1) -1px 2px 12px 0px; 
+  border-radius: 100px;
+  border: 1px solid #4D4D4D;
+  width: 500px;
+  margin-left: 37%;
+  align-items:center ;
+}
+
+.navbar.sticky {
+  background-color: rgba(255, 255, 255, 0.08); /* Opaque background when sticky */
+  box-shadow: rgba(0, 0, 0, 0.1) -1px 2px 12px 0px; 
+  border-radius: 100px;
+  border: 1px solid #4D4D4D;
+  margin-left: 37%;
+
+}
+.social-wrapper {
+  display: block; /* Default is visible */
+}
 
 @media (max-width: 768px) {
+  .social-wrapper {
+    display: none; /* Hide on smaller screens */
+  }
   .card-content {
     grid-template-columns: 1fr; 
     padding: 3.4em; 
@@ -169,49 +198,31 @@ h1 {
   .card-content > div {
     gap: 0.5em;
   }
- 
-}
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 1000; /* Ensure it appears above other elements */
-  background-color: transparent; /* Transparent background */
-  transition: background-color 0.3s ease; 
-  background-color: rgba(255, 255, 255, 0.08); /* Opaque background when sticky */
-  box-shadow: rgba(0, 0, 0, 0.1) -1px 2px 12px 0px; 
-  border-radius: 100px;
-  border: 1px solid #4D4D4D;
-  width: 450px;
-  margin-left: 40%;
-  align-items:center ;
-}
-
-.navbar.sticky {
-  background-color: rgba(255, 255, 255, 0.08); /* Opaque background when sticky */
-  box-shadow: rgba(0, 0, 0, 0.1) -1px 2px 12px 0px; 
-  border-radius: 100px;
-  border: 1px solid #4D4D4D;
-  margin-left: 40%;
-
-}
-.ham-burger {
-  display:block;
-  color: white; /* Display hamburger button on small screens */
-}
-
-.menu {
-  display: none; /* Hide full menu on small screens */
-}
-
-@media (min-width: 768px) {
-  .ham-burger {
-    display: none;
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure it appears above other elements */
+    background-color: transparent; /* Transparent background */
+    transition: background-color 0.3s ease; 
+    background-color: rgba(255, 255, 255, 0.08); /* Opaque background when sticky */
+    box-shadow: rgba(0, 0, 0, 0.1) -1px 2px 12px 0px; 
+    border-radius: 100px;
+    border: 1px solid #4D4D4D;
+    width: 450px;
+    margin-left: 0%;
+    align-items:center ;
   }
-
-  .menu {
-    display: flex; /* Show full menu on larger screens */
+  .navbar.sticky {
+    background-color: rgba(255, 255, 255, 0.08); /* Opaque background when sticky */
+    box-shadow: rgba(0, 0, 0, 0.1) -1px 2px 12px 0px; 
+    border-radius: 100px;
+    border: 1px solid #4D4D4D;
+    margin-left: 0%;
+  
   }
 }
+
+
 
 @supports (animation-timeline: works) {
   @scroll-timeline cards-element-scrolls-in-body {

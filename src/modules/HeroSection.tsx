@@ -21,7 +21,7 @@ const HeroPage: React.FC = () => {
     }
   };
   return (
-    <Flex vertical className="hero">
+    <Flex vertical className="hero" id="home">
       <div className="avatar-wrapper">
         <Image
           src={Videos.src}

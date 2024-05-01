@@ -10,12 +10,10 @@ const Navbar: FC = () => {
   const [isSticky, setIsSticky] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
 
-  // Function to check scroll position
   const handleScroll = () => {
-    setIsSticky(window.scrollY > 50); // Set threshold to when it becomes sticky
+    setIsSticky(window.scrollY > 50); 
   };
 
-  // Add/remove event listener for scrolling
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -39,7 +37,17 @@ const Navbar: FC = () => {
 
   return (
     <Flex justify="center" className={`navbar ${isSticky ? "sticky" : ""}`}>
-      <Space size="large" style={{ marginTop: "-15px" }} className="menu">
+      <Space size="large" style={{ marginTop: "-15px" }} >
+      <Title
+          level={5}
+          style={{
+            color: "white",
+            fontFamily: "cursive",
+          }}
+          onClick={handleRedirect(`/`)}
+        >
+          HOME
+        </Title>
         <Title
           level={5}
           style={{
@@ -81,37 +89,7 @@ const Navbar: FC = () => {
           CONTACT
         </Title>
       </Space>
-      <Button
-        type="text"
-        icon={<MenuOutlined />}
-        onClick={toggleDrawer}
-        className="ham-burger"
-      />
-      <Drawer
-        placement="top"
-        closable={true}
-        onClose={toggleDrawer}
-        open={drawerOpen}
-      >
-        <Space
-          direction="vertical"
-          size="large"
-          style={{ fontFamily: "cursive" }}
-        >
-          <Title level={5} onClick={() => scrollToSection("works")}>
-            WORKS
-          </Title>
-          <Title level={5} onClick={() => handleRedirect("/about-me")}>
-            ABOUT ME
-          </Title>
-          <Title level={5} onClick={() => scrollToSection("skills")}>
-            SKILLS
-          </Title>
-          <Title level={5} onClick={() => scrollToSection("contact")}>
-            CONTACT
-          </Title>
-        </Space>
-      </Drawer>
+     
     </Flex>
   );
 };

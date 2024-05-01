@@ -2,6 +2,7 @@ import { Space } from "antd";
 import React from "react";
 import { CgMail } from "react-icons/cg";
 import { FaFacebookF, FaGithub, FaLinkedin } from "react-icons/fa";
+import "./styles/Herosection.css"
 
 const Social = () => {
   return (
@@ -12,6 +13,7 @@ const Social = () => {
         right: "20px",
         transform: "translateY(-50%)",
       }}
+      className="social-wrapper"
     >
       <Space direction="vertical" size="large">
         <a href="https://github.com/Sapnaasubedi" style={{ color: "white" }}>
