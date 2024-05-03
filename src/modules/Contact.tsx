@@ -74,8 +74,6 @@ const Contact = () => {
           </Col>
           <Col xs={24} sm={24} md={12} lg={6} xl={6}>
             <div className="animated-div">
-              <div className="css-1jlnxoy">
-                <div className="text-viewer">
                   <p
                     style={{
                       lineHeight: `92px`,
@@ -83,7 +81,6 @@ const Contact = () => {
                       fontWeight: `900`,
                       fontSize: `62px`,
                     }}
-                    className="view-mode unstyled style-65ac04ad-3889-4baa-a93e-455d2dc05593"
                   >
                     <span
                       style={{
@@ -93,8 +90,6 @@ const Contact = () => {
                       Say Hi!
                     </span>
                   </p>
-                </div>
-              </div>
             </div>
           </Col>
         </Row>

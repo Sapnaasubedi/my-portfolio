@@ -143,7 +143,7 @@ const BeyondPortfolio = () => {
             border: "none",
           }}
         >
-          {" "}
+          
           <Space>
             <Image src={BoBa.src} height={80} width={80} alt="" />
             <Text style={{ fontFamily: "Lobster", color: "black" }}>
@@ -192,9 +192,9 @@ const BeyondPortfolio = () => {
             }}
           >
             <Text strong style={{ color: "black", fontSize: "20px" }}>
-              Gym girl 🏋️‍♀️{" "}
+              Gym girl 🏋️‍♀️
             </Text>
-          </Button>{" "}
+          </Button>
           <Button
             size="large"
             style={{
@@ -211,7 +211,7 @@ const BeyondPortfolio = () => {
             <Text strong style={{ color: "black", fontSize: "20px" }}>
               Traveller ✈️
             </Text>
-          </Button>{" "}
+          </Button>
           <Button
             size="large"
             style={{
@@ -227,7 +227,7 @@ const BeyondPortfolio = () => {
             <Text strong style={{ color: "black", fontSize: "20px" }}>
               Foodie 🥞
             </Text>
-          </Button>{" "}
+          </Button>
           <Button
             size="large"
             style={{
