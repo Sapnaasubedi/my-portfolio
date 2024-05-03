@@ -7,9 +7,9 @@ import Social from "@/modules/Social";
 
 import React from "react";
 const aboutMeSections = [
-  { id: "", label: "HOME", isRedirect: true },
-  { id: "about-me", label: "ABOUT ME", isRedirect: true },
-  { id: "contact", label: "CONTACT", isRedirect: false },
+  { id: "home", href: "", label: "HOME", isRedirect: true },
+  { id: "about-me", href: "about-me", label: "ABOUT ME", isRedirect: true },
+  { id: "contact",  href: "contact",label: "CONTACT", isRedirect: false },
 ];
 const page = () => {
   return (
