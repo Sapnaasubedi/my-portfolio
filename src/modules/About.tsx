@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import CoverImage from "../app/assets/cover.jpeg";
 import { useRouter } from "next/navigation";
+import { useIsSmallScreen } from "./AboutMe/InfiniteLoop";
 
 const { Title, Text } = Typography;
 
@@ -13,6 +14,8 @@ const AboutMe = () => {
   const handleRedirect = (url: string) => () => {
     push(url);
   };
+  const isSmallScreen = useIsSmallScreen();
+
   return (
     <Row
       gutter={[16, 16]}
@@ -23,7 +26,7 @@ const AboutMe = () => {
       }}
     >
       <Col xs={24} sm={24} md={12} lg={10} >
-        <Space direction="vertical" style={{ textAlign: "left" }}>
+          <Space direction="vertical" style={{  textAlign: isSmallScreen ? 'center' : 'left', }}>
           <Title
             level={5}
             style={{

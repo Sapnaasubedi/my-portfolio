@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import "../styles/Herosection.css";
 import {
   FaAws,
@@ -64,4 +64,24 @@ export const Tag: FC<TagProps> = ({ tag }) => {
   const IconComponent = TAG_ICONS[tag];
 
   return <div className="tag">{IconComponent && <>{IconComponent}</>}</div>;
+};
+
+export const useIsSmallScreen = () => {
+  const [isSmall, setIsSmall] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmall(window.innerWidth <= 768); // Adjust the breakpoint as needed
+    };
+
+    // Set initial value
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  return isSmall;
 };

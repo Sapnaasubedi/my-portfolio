@@ -70,9 +70,14 @@
   } /* Tablet and smaller screens */
   .container {
     padding: 20px; /* Reduced padding */
-    flex-wrap: nowrap; /* No wrapping for horizontal scrolling */
+    flex-wrap: nowrap;
+    width: max-content; 
   }
-
+  .cards-wrapper {
+    display: flex; /* Horizontal Flex layout */
+    justify-content: flex-start; 
+    width: fit-content;/* Align cards at the beginning */
+  }
   .about-card {
     width: 150px; /* Smaller width for smaller screens */
     height: 210px;
@@ -89,6 +94,11 @@
 }
 
 @media (max-width: 480px) {
+  .cards-wrapper {
+    display: flex; /* Horizontal Flex layout */
+    justify-content: flex-start; 
+    width: fit-content;/* Align cards at the beginning */
+  }
   .hero-heading {
     font-size: 1.5rem;
   }

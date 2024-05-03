@@ -3,11 +3,12 @@ import React, { FC, useEffect, useState } from "react";
 import { Button, Drawer, Flex, Space, Typography } from "antd";
 import { useRouter } from "next/navigation";
 import { MenuOutlined } from "@ant-design/icons";
+import { useIsSmallScreen } from "./AboutMe/InfiniteLoop";
 
 const { Title } = Typography;
 
 interface NavbarProps {
-  sections: Array<{ id: string; label: string; isRedirect: boolean }>;
+  sections: Array<{ id: string; href: string; label: string; isRedirect: boolean }>;
 }
 const Navbar:FC<NavbarProps> = ({ sections })  => {
   const [isSticky, setIsSticky] = useState(false);
@@ -51,25 +52,7 @@ const Navbar:FC<NavbarProps> = ({ sections })  => {
     setDrawerOpen((prevState) => !prevState);
   };
 
-  const useIsSmallScreen = () => {
-    const [isSmall, setIsSmall] = useState(false);
   
-    useEffect(() => {
-      const handleResize = () => {
-        setIsSmall(window.innerWidth <= 768); // Adjust the breakpoint as needed
-      };
-  
-      // Set initial value
-      handleResize();
-  
-      window.addEventListener("resize", handleResize);
-      return () => {
-        window.removeEventListener("resize", handleResize);
-      };
-    }, []);
-  
-    return isSmall;
-  };
   const isSmallScreen = useIsSmallScreen();
 
   return (
@@ -111,7 +94,7 @@ const Navbar:FC<NavbarProps> = ({ sections })  => {
               fontFamily: "Josefin Sans",
             }}
             onClick={
-              section.isRedirect ? handleRedirect(`/${section.id}`) : () => scrollToSection(section.id)
+              section.isRedirect ? handleRedirect(`/${section.href}`) : () => scrollToSection(section.id)
             }
           >
             {section.label}

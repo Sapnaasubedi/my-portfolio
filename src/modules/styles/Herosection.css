@@ -10,8 +10,9 @@ body {
 }
 
 .hero {
-  
+  margin: 40px;
   align-items: center;
+  height: 75vh;
 }
 
 h1 {
@@ -31,20 +32,14 @@ h1 {
     h1 {
     font-size: 48px;
   }
-  .hero {
-  
-    align-items: center;
-  }
+ 
 }
 
 @media (max-width: 400px) {
   h1 {
     font-size: 38px;
   }  
-  .hero {
-  
-    align-items: center;
-  }
+
 }
 
 .avatar-wrapper {
@@ -221,14 +216,14 @@ margin: 20px;
     align-items:center ;
   }
   .navbar.sticky {
-    background-color: rgba(255, 255, 255, 0.08); /* Opaque background when sticky */
+    background-color: rgba(255, 255, 255, 0.08); 
     box-shadow: rgba(0, 0, 0, 0.1) -1px 2px 12px 0px; 
     border-radius: 100px;
     border: 1px solid #4D4D4D;
   
   }
   .navbar-space {
-    display: none; /* Hide the full menu on smaller screens */
+    display: none; 
   }
 
  
@@ -248,9 +243,9 @@ margin: 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: transparent; /* Transparent background */
+    background-color: transparent; 
     transition: background-color 0.3s ease; 
-    background-color: rgba(255, 255, 255, 0.08); /* Opaque background when sticky */
+    background-color: rgba(255, 255, 255, 0.08); 
     box-shadow: rgba(0, 0, 0, 0.1) -1px 2px 12px 0px; 
     border-radius: 100px;
     border: 1px solid #4D4D4D;
@@ -258,7 +253,7 @@ margin: 20px;
     align-items:center ;
   }
   .navbar.sticky {
-    background-color: rgba(255, 255, 255, 0.08); /* Opaque background when sticky */
+    background-color: rgba(255, 255, 255, 0.08); 
     box-shadow: rgba(0, 0, 0, 0.1) -1px 2px 12px 0px; 
     border-radius: 100px;
     border: 1px solid #4D4D4D;

@@ -9,11 +9,11 @@ import Works from "@/modules/Works";
 
 import React from "react";
 const homeSections = [
-  { id: "", label: "HOME", isRedirect: true },
-  { id: "works", label: "WORKS", isRedirect: false },
-  { id: "about-me", label: "ABOUT ME", isRedirect: true },
-  { id: "skills", label: "SKILLS", isRedirect: false },
-  { id: "contact", label: "CONTACT", isRedirect: false },
+  { id: "home", href: "", label: "HOME", isRedirect: true },
+  { id: "works",  href: "works",label: "WORKS", isRedirect: false },
+  { id: "about-me", href: "about-me", label: "ABOUT ME", isRedirect: true },
+  { id: "skills", href: "skills", label: "SKILLS", isRedirect: false },
+  { id: "contact",  href: "contact",label: "CONTACT", isRedirect: false },
 ];
 const page = () => {
   return (
