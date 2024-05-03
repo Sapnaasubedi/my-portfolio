@@ -117,7 +117,7 @@ const Navbar:FC<NavbarProps> = ({ sections })  => {
           style={{color:"white" , display:"block" , lineHeight:"50px"}}
             key={section.id}
             onClick={
-              section.isRedirect ? handleRedirect(`/${section.id}`) : () => scrollToSection(section.id)
+              section.isRedirect ? handleRedirect(`/${section.href}`) : () => scrollToSection(section.id)
             }
           >
             {section.label}
