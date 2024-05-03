@@ -8,11 +8,17 @@ import Social from "@/modules/Social";
 import Works from "@/modules/Works";
 
 import React from "react";
-
+const homeSections = [
+  { id: "", label: "HOME", isRedirect: true },
+  { id: "works", label: "WORKS", isRedirect: false },
+  { id: "about-me", label: "ABOUT ME", isRedirect: true },
+  { id: "skills", label: "SKILLS", isRedirect: false },
+  { id: "contact", label: "CONTACT", isRedirect: false },
+];
 const page = () => {
   return (
-    <div>
-      <Navbar />
+    <>
+      <Navbar  sections={homeSections}/>
       <HeroPage />
       <Social/>
       <Works/>
@@ -20,7 +26,7 @@ const page = () => {
      <Skills/>
      <Contact/>
      <Footer/>
-    </div>
+    </>
   );
 };
 

@@ -60,6 +60,7 @@
 }
 
 @media (max-width: 768px) {
+  
   .hero-heading {
     font-size: 1.9rem;
   }

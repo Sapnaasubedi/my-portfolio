@@ -6,11 +6,15 @@ import Navbar from "@/modules/Navbar";
 import Social from "@/modules/Social";
 
 import React from "react";
-
+const aboutMeSections = [
+  { id: "", label: "HOME", isRedirect: true },
+  { id: "about-me", label: "ABOUT ME", isRedirect: true },
+  { id: "contact", label: "CONTACT", isRedirect: false },
+];
 const page = () => {
   return (
     <div>
-      <Navbar />
+      <Navbar sections={aboutMeSections} />
       <AboutHeroPage />
       <Social/>
       <BeyondPortfolio/>

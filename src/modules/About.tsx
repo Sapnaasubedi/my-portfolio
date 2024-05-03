@@ -22,7 +22,7 @@ const AboutMe = () => {
         alignItems: "center",
       }}
     >
-      <Col xs={24} sm={24} md={12} lg={10}>
+      <Col xs={24} sm={24} md={12} lg={10} >
         <Space direction="vertical" style={{ textAlign: "left" }}>
           <Title
             level={5}
@@ -40,7 +40,7 @@ const AboutMe = () => {
           <Text
             style={{
               color: "white",
-              fontFamily: "cursive",
+              fontFamily: "Josefin Sans",
               fontSize: "32px",
               fontWeight: 700,
             }}
@@ -51,7 +51,7 @@ const AboutMe = () => {
           <Text
             style={{
               color: "white",
-              fontFamily: "cursive",
+              fontFamily: "Josefin Sans",
               fontSize: "24px",
             }}
           >
@@ -64,7 +64,8 @@ const AboutMe = () => {
               fontSize: "20px",
               fontWeight: 200,
               lineHeight: "30px",
-              fontFamily: "cursive",
+              fontFamily: "Josefin Sans",
+
             }}
           >
             Hello! I&apos;m a seasoned software developer with a passion for

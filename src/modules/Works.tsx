@@ -43,7 +43,7 @@ const Works: React.FC = () => {
         level={2}
         style={{
           color: "white",
-          fontFamily: "cursive",
+          fontFamily: "Josefin Sans",
           textAlign: "center",
           fontSize: "38px",
         }}
@@ -72,8 +72,8 @@ const Works: React.FC = () => {
                 <Text
                   style={{
                     color: "white",
-                    fontFamily: "cursive",
-                    fontSize: "38px",
+                    fontFamily: "Caveat",
+                    fontSize: "40px",
                   }}
                 >
                   Software Developer
@@ -127,7 +127,7 @@ const Works: React.FC = () => {
                     borderRadius: "12px",
                     background: "rgba(230, 230, 230, 1)",
                     border: "none",
-                    boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;",
+                    boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
                     height: "50px",
                     width: "100%",
                     marginTop: "40px",
@@ -177,9 +177,9 @@ const Works: React.FC = () => {
                 <Text
                   style={{
                     color: "white",
-                    fontFamily: "cursive",
+                    fontFamily: "Caveat",
 
-                    fontSize: "38px",
+                    fontSize: "40px",
                   }}
                 >
                   Frontend Engineer
@@ -235,7 +235,7 @@ const Works: React.FC = () => {
                     borderRadius: "12px",
                     background: "rgba(230, 230, 230, 1)",
                     border: "none",
-                    boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;",
+                    boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
                     height: "50px",
                     width: "auto",
                     marginTop: "40px",
@@ -285,9 +285,9 @@ const Works: React.FC = () => {
                 <Text
                   style={{
                     color: "white",
-                    fontFamily: "cursive",
+                    fontFamily: "Caveat",
 
-                    fontSize: "38px",
+                    fontSize: "40px",
                   }}
                 >
                   Frontend Developer

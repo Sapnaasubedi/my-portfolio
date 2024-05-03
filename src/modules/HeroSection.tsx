@@ -36,7 +36,7 @@ const HeroPage: React.FC = () => {
         Exploring the Boundless Horizons of &nbsp;
         <span
           style={{
-            background: " ",
+            background: "linear-gradient(90deg, rgba(46,60,134,1) 0%, rgba(103,141,228,1) 53%, rgba(61,61,89,1) 100%)",
             WebkitBackgroundClip: `text`,
             WebkitTextFillColor: `transparent`,
           }}

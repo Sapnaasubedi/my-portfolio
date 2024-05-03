@@ -6,12 +6,28 @@ import { MenuOutlined } from "@ant-design/icons";
 
 const { Title } = Typography;
 
-const Navbar: FC = () => {
+interface NavbarProps {
+  sections: Array<{ id: string; label: string; isRedirect: boolean }>;
+}
+const Navbar:FC<NavbarProps> = ({ sections })  => {
   const [isSticky, setIsSticky] = useState(false);
+  const [activeSection, setActiveSection] = useState("/");
   const [drawerOpen, setDrawerOpen] = useState(false);
 
+  const { push } = useRouter();
+
   const handleScroll = () => {
-    setIsSticky(window.scrollY > 50); 
+    setIsSticky(window.scrollY > 50);
+
+    sections.forEach((section) => {
+      const element = document.getElementById(section.id);
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+          setActiveSection(section.id);
+        }
+      }
+    });
   };
 
   useEffect(() => {
@@ -20,77 +36,113 @@ const Navbar: FC = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const handleRedirect = (url: string) => () => {
+    push(url);
+    setDrawerOpen(false);  };
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
-  const { push } = useRouter();
-
-  const handleRedirect = (url: string) => () => {
-    push(url);
-  };
   const toggleDrawer = () => {
-    setDrawerOpen(!drawerOpen);
+    setDrawerOpen((prevState) => !prevState);
   };
+
+  const useIsSmallScreen = () => {
+    const [isSmall, setIsSmall] = useState(false);
+  
+    useEffect(() => {
+      const handleResize = () => {
+        setIsSmall(window.innerWidth <= 768); // Adjust the breakpoint as needed
+      };
+  
+      // Set initial value
+      handleResize();
+  
+      window.addEventListener("resize", handleResize);
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }, []);
+  
+    return isSmall;
+  };
+  const isSmallScreen = useIsSmallScreen();
 
   return (
-    <Flex justify="center" className={`navbar ${isSticky ? "sticky" : ""}`}>
-      <Space size="large" style={{ marginTop: "-15px" }} >
-      <Title
-          level={5}
-          style={{
-            color: "white",
-            fontFamily: "cursive",
-          }}
-          onClick={handleRedirect(`/`)}
-        >
-          HOME
-        </Title>
-        <Title
-          level={5}
-          style={{
-            color: "white",
-            fontFamily: "cursive",
-          }}
-          onClick={() => scrollToSection("works")}
-        >
-          WORKS
-        </Title>
-        <Title
-          level={5}
-          style={{
-            color: "white",
-            fontFamily: "cursive",
-          }}
-          onClick={handleRedirect(`/about-me`)}
-        >
-          ABOUT ME
-        </Title>
-        <Title
-          level={5}
-          style={{
-            color: "white",
-            fontFamily: "cursive",
-          }}
-          onClick={() => scrollToSection("skills")}
-        >
-          SKILLS
-        </Title>
-        <Title
-          level={5}
-          style={{
-            color: "white",
-            fontFamily: "cursive",
-          }}
-          onClick={() => scrollToSection("contact")}
-        >
-          CONTACT
-        </Title>
+       <Flex justify="center" className={`navbar ${isSticky ? "sticky" : ""}`}>
+       
+
+       {isSmallScreen && (
+        <Space style={{ gap: "95px"}}>
+          <Title 
+        level={3}
+        style={{
+          color: "white",
+          display: "inline-block",
+          background: "linear-gradient(90deg, rgba(46,60,134,1) 0%, rgba(103,141,228,1) 53%, rgba(61,61,89,1) 100%)",
+            WebkitBackgroundClip: `text`,
+            WebkitTextFillColor: `transparent`,
+            fontFamily: "Caveat"
+
+        }}
+        onClick={handleRedirect(`/`)}
+      >
+        SAPANA
+      </Title> <Button
+        type="text"
+        icon={<MenuOutlined />}
+        onClick={toggleDrawer}
+        style={{ display: "inline-block" , color:"white"}}
+      /></Space>
+       
+      )}
+         
+      <Space size="large" style={{ marginTop: "-15px" }} className="navbar-space">
+        {sections.map((section) => (
+          <Title
+            key={section.id}
+            level={5}
+            style={{
+              color: activeSection === section.id ? "yellow" : "white",
+              fontFamily: "Josefin Sans",
+            }}
+            onClick={
+              section.isRedirect ? handleRedirect(`/${section.id}`) : () => scrollToSection(section.id)
+            }
+          >
+            {section.label}
+          </Title>
+        ))}
       </Space>
-     
+      <Drawer
+        title=""
+        placement="top"
+        onClose={toggleDrawer}
+        open={drawerOpen}
+        style={{ background: "rgba(255, 255, 255, 0.2)",
+        borderRadius: "12px",
+        border: "1px solid rgba(255, 255, 255, 0.2)",
+        boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+        opacity: "1",}}
+      >
+        {sections.map((section) => (
+          <Typography.Text
+          style={{color:"white" , display:"block" , lineHeight:"50px"}}
+            key={section.id}
+            onClick={
+              section.isRedirect ? handleRedirect(`/${section.id}`) : () => scrollToSection(section.id)
+            }
+          >
+            {section.label}
+          </Typography.Text>
+        ))}
+      </Drawer>
     </Flex>
+   
   );
 };
 
