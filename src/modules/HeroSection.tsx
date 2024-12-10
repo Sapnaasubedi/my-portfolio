@@ -4,16 +4,12 @@ import "./styles/Herosection.css";
 import { Button, Flex, Space, Typography } from "antd";
 import Videos from "@/app/assets/pp.png";
 import Image from "next/image";
+import { openInNewTab } from "@/utils/link";
 
 const {  Text } = Typography;
 
 const HeroPage: React.FC = () => {
-  const openResume = () => {
-    window.open(
-      "https://docs.google.com/document/d/1Cbm4Dwx9xM2m2Arr91B6Hqk58MhCmwkhb7cSWikqnLg/edit?pli=1",
-      "_blank",
-    );
-  };
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -75,7 +71,7 @@ const HeroPage: React.FC = () => {
             width: "auto",
           }}
           size="large"
-          onClick={openResume}
+          onClick={() => openInNewTab("https://docs.google.com/document/d/1Cbm4Dwx9xM2m2Arr91B6Hqk58MhCmwkhb7cSWikqnLg/edit?pli=1")}
         >
           <Text
             strong

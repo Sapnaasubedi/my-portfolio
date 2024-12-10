@@ -10,13 +10,12 @@ import Lightweb from "@/app/assets/light.png";
 import liquor from "@/app/assets/lightwe.png";
 import Girl from "@/app/assets/ithome.png";
 import ImageSider from "./ImageSlider";
+import { openInNewTab } from "@/utils/link";
 
 const { Title, Text } = Typography;
 
 const Works: React.FC = () => {
-  const openInNewTab = (url: string) => {
-    window.open(url, "_blank", "noopener,noreferrer");
-  };
+ 
   
   const images = [
     { id: 1, src: Takeobg.src, alt: "Image 1", url: "https://www.takeo.ai/" },
