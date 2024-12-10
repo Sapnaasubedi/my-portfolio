@@ -14,11 +14,8 @@ import ImageSider from "./ImageSlider";
 const { Title, Text } = Typography;
 
 const Works: React.FC = () => {
-  const openResume = () => {
-    window.open(
-      "https://docs.google.com/document/d/1Cbm4Dwx9xM2m2Arr91B6Hqk58MhCmwkhb7cSWikqnLg/edit?pli=1",
-      "_blank",
-    );
+  const openInNewTab = (url: string) => {
+    window.open(url, "_blank", "noopener,noreferrer");
   };
   
   const images = [
@@ -150,7 +147,7 @@ const Works: React.FC = () => {
                     marginTop: "40px",
                   }}
                   size="large"
-                  onClick={openResume}
+                  onClick={()=> openInNewTab("https://docs.google.com/document/d/1Cbm4Dwx9xM2m2Arr91B6Hqk58MhCmwkhb7cSWikqnLg/edit?pli=1")}
                 >
                   <Text
                     strong
@@ -245,7 +242,7 @@ const Works: React.FC = () => {
                     marginTop: "40px",
                   }}
                   size="large"
-                  onClick={openResume}
+                  onClick={()=> openInNewTab("https://docs.google.com/document/d/1Cbm4Dwx9xM2m2Arr91B6Hqk58MhCmwkhb7cSWikqnLg/edit?pli=1")}
                 >
                   <Text
                     strong
@@ -346,7 +343,7 @@ const Works: React.FC = () => {
                     marginTop: "40px",
                   }}
                   size="large"
-                  onClick={openResume}
+                  onClick={()=> openInNewTab("https://docs.google.com/document/d/1Cbm4Dwx9xM2m2Arr91B6Hqk58MhCmwkhb7cSWikqnLg/edit?pli=1")}
                 >
                   <Text
                     strong
