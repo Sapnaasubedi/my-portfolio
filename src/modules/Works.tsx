@@ -3,10 +3,13 @@ import React from "react";
 import { Typography, Row, Col, Flex, Space, Button } from "antd";
 import "./styles/Herosection.css";
 import Image from "next/image";
-import Takeobg from "@/app/assets/takeobg.png";
+import Takeobg from "@/app/assets/takeo.png";
+import Quantum from "@/app/assets/quantum.png";
 import { CiCircleCheck } from "react-icons/ci";
-import Programming from "@/app/assets/programming.png";
-import Girl from "@/app/assets/girl.png";
+import Lightweb from "@/app/assets/light.png";
+import liquor from "@/app/assets/lightwe.png";
+import Girl from "@/app/assets/ithome.png";
+import ImageSider from "./ImageSlider";
 
 const { Title, Text } = Typography;
 
@@ -17,6 +20,20 @@ const Works: React.FC = () => {
       "_blank",
     );
   };
+  
+  const images = [
+    { id: 1, src: Takeobg.src, alt: "Image 1", url: "https://www.takeo.ai/" },
+    { id: 2, src: Quantum.src, alt: "Image 2", url: "https://quantumleap.takeo.ai/auth/login" },
+  ];
+
+  const lightImages = [
+    { id: 1, src: Lightweb.src, alt: "Image 1", url: "https://lightwebgroup.com/" },
+    { id: 2, src: liquor.src, alt: "Image 2", url: "https://liquorworld.com.np/" },
+  ];
+
+  const itImages = [
+    { id: 1, src: Girl.src, alt: "Image 1", url: "https://www.prabidhilabs.com/" },
+  ];
   return (
     <Flex
       vertical
@@ -147,13 +164,8 @@ const Works: React.FC = () => {
                   </Text>
                 </Button>
               </Space>
-              <figure>
-                <Image
-                  src={Takeobg.src}
-                  alt="card-one"
-                  width={500}
-                  height={50}
-                />
+              <figure style={{  width: "80%", height:"60%", alignSelf: "center" }}>
+              <ImageSider images={images} />
               </figure>
             </Flex>
           </Col>
@@ -204,15 +216,7 @@ const Works: React.FC = () => {
                   <CiCircleCheck /> Collaborated on backend inventory
                   management.
                 </Text>
-                <Text
-                  style={{
-                    color: "rgba(255, 255, 255, 0.8)",
-                    fontSize: "18px",
-                  }}
-                >
-                  <CiCircleCheck /> Collaborated on backend inventory
-                  management.
-                </Text>
+                
                 <Text
                   style={{
                     color: "rgba(255, 255, 255, 0.8)",
@@ -255,13 +259,8 @@ const Works: React.FC = () => {
                   </Text>
                 </Button>
               </Space>
-              <figure>
-                <Image
-                  src={Programming.src}
-                  alt="card-two"
-                  width={500}
-                  height={500}
-                />
+              <figure style={{  width: "80%", height:"60%", alignSelf: "center" }}>
+                <ImageSider images={lightImages} />
               </figure>
             </Flex>
           </Col>
@@ -361,13 +360,8 @@ const Works: React.FC = () => {
                   </Text>
                 </Button>
               </Space>
-              <figure>
-                <Image
-                  src={Girl.src}
-                  alt="card-thre"
-                  width={500}
-                  height={500}
-                />
+              <figure style={{  width: "80%", height:"60%", alignSelf: "center" }}>
+                <ImageSider images={itImages} />
               </figure>
             </Flex>
           </Col>

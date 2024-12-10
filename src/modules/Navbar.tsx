@@ -8,7 +8,7 @@ import { useIsSmallScreen } from "./AboutMe/InfiniteLoop";
 const { Title } = Typography;
 
 interface NavbarProps {
-  sections: Array<{ id: string; href: string; label: string; isRedirect: boolean }>;
+  sections: Array<{ id: string; href: string; label: string | JSX.Element; isRedirect: boolean }>;
 }
 const Navbar:FC<NavbarProps> = ({ sections })  => {
   const [isSticky, setIsSticky] = useState(false);

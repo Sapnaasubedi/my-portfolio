@@ -4,12 +4,13 @@ import {
   FaAws,
   FaCss3Alt,
   FaHtml5,
+  FaJava,
   FaJsSquare,
   FaPython,
   FaReact,
 } from "react-icons/fa";
-import { SiMongodb, SiNextdotjs, SiTypescript } from "react-icons/si";
-import { BiLogoRedux } from "react-icons/bi";
+import { SiExpress, SiMongodb, SiNextdotjs, SiTypescript } from "react-icons/si";
+import { BiLogoRedux, BiLogoSpringBoot } from "react-icons/bi";
 
 export type ValidTags = keyof typeof TAG_ICONS;
 
@@ -49,11 +50,14 @@ export const TAG_ICONS = {
   JavaScript: <FaJsSquare color="#F7DF1E" size={40} />,
   TypeScript: <SiTypescript color="#3178C6" size={40} />,
   React: <FaReact color="#61DAFB" size={40} />,
-  "Next.js": <SiNextdotjs color="#fff" size={40} />,
+  Next: <SiNextdotjs color="#fff" size={40} />,
   Redux: <BiLogoRedux color="#b77ee6" size={40} />,
   AWS: <FaAws color="#e6ab7e" size={40} />,
   MongoDB: <SiMongodb color="#2b800e" size={40} />,
   Python: <FaPython color="#7e8ee6" size={40} />,
+  Java: <FaJava color="yellow" size={40} />,
+  SpringBoot: <BiLogoSpringBoot color="green" size={40} />,
+  Express: <SiExpress color="white" size={40} />,
 };
 
 interface TagProps {
@@ -71,10 +75,9 @@ export const useIsSmallScreen = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsSmall(window.innerWidth <= 768); // Adjust the breakpoint as needed
+      setIsSmall(window.innerWidth <= 768); 
     };
 
-    // Set initial value
     handleResize();
 
     window.addEventListener("resize", handleResize);

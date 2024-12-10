@@ -2,7 +2,7 @@
 import { Button, Col, Flex, Row, Space, Typography } from "antd";
 import React from "react";
 import Image from "next/image";
-import CoverImage from "../app/assets/cover.jpeg";
+import CoverImage from "../app/assets/Cover.jpg";
 import { useRouter } from "next/navigation";
 import { useIsSmallScreen } from "./AboutMe/InfiniteLoop";
 
